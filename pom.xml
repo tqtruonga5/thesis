@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>vn.edu.hcmut</groupId>
+    <artifactId>CSE-thesis-relExtraction-2015</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>EMR Relation Extraction</name>
+    <dependencies>
+        <!-- Stanford parse -->
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.5.2</version>
+            <classifier>models</classifier>
+        </dependency>
+        <!-- End Stanford parse -->
+
+        <!-- liblinear -->
+        <dependency>
+            <groupId>de.bwaldvogel</groupId>
+            <artifactId>liblinear</artifactId>
+            <version>1.95</version>
+        </dependency>
+        <!-- end liblinear -->
+    </dependencies>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <jdk.version>1.7</jdk.version>
+        <app.version>${project.version}</app.version>
+        <servlet.version>3.1.0</servlet.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+</project>
