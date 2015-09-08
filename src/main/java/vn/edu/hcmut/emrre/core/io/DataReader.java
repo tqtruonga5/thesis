@@ -8,6 +8,5 @@ public interface DataReader {
     Concept readSingleConcept(String line);
 
     List<Concept> readMultiple(String line);
-    
-    
+
 }

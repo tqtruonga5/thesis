@@ -34,7 +34,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <jdk.version>1.7</jdk.version>
+        <jdk.version>1.8</jdk.version>
         <app.version>${project.version}</app.version>
         <servlet.version>3.1.0</servlet.version>
         <slf4j.version>1.7.12</slf4j.version>

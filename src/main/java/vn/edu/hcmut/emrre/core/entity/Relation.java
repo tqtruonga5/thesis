@@ -6,7 +6,7 @@ public class Relation {
     private Concept posConcept;
 
     
-    public enum TYPE {
+    public enum Type {
         TRAP, PIP
     }; 
 }
