@@ -2,21 +2,22 @@ package vn.edu.hcmut.emrre.core.entity;
 
 public class Word {
     // private long id;
-     private int index;
-    private DocLine sentence;
+    private int index;
+    private DocLine docLine;
     private String content;
-    // private IBOTag iboTag;
     private String posTag;
-//    private String orthTag;
-//    private String sessionTag;
-//    private int umlsTag;
+
+    // private IBOTag iboTag;
+    // private String orthTag;
+    // private String sessionTag;
+    // private int umlsTag;
 
     public DocLine getSentence() {
-        return sentence;
+        return docLine;
     }
 
-    public void setSentence(DocLine sentence) {
-        this.sentence = sentence;
+    public void setSentence(DocLine docLine) {
+        this.docLine = docLine;
     }
 
     public String getContent() {
@@ -35,27 +36,27 @@ public class Word {
         this.posTag = posTag;
     }
 
-//    public String getOrthTag() {
-//        return orthTag;
-//    }
-//
-//    public void setOrthTag(String orthTag) {
-//        this.orthTag = orthTag;
-//    }
-//
-//    public String getSessionTag() {
-//        return sessionTag;
-//    }
-//
-//    public void setSessionTag(String sessionTag) {
-//        this.sessionTag = sessionTag;
-//    }
-//
-//    public int getUmlsTag() {
-//        return umlsTag;
-//    }
-//
-//    public void setUmlsTag(int umlsTag) {
-//        this.umlsTag = umlsTag;
-//    }
+    // public String getOrthTag() {
+    // return orthTag;
+    // }
+    //
+    // public void setOrthTag(String orthTag) {
+    // this.orthTag = orthTag;
+    // }
+    //
+    // public String getSessionTag() {
+    // return sessionTag;
+    // }
+    //
+    // public void setSessionTag(String sessionTag) {
+    // this.sessionTag = sessionTag;
+    // }
+    //
+    // public int getUmlsTag() {
+    // return umlsTag;
+    // }
+    //
+    // public void setUmlsTag(int umlsTag) {
+    // this.umlsTag = umlsTag;
+    // }
 }
