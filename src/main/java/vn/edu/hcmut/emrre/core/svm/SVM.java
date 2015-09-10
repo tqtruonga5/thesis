@@ -38,16 +38,18 @@ public class SVM {
     	PrintWriter out;
 		out = new PrintWriter(System.out);
 		Properties props = new Properties();
-		props.setProperty("annotators",	"tokenize, ssplit, pos, lemma, ner,parse");
+		props.setProperty("annotators",	"tokenize, ssplit, pos");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-		Annotation annotation = new Annotation("My name is Lap, i come from London. The Patient recorded as having No Known Allergies to Drugs Attending.");
+		Annotation annotation = new Annotation("She presented with. Hello,");
 		pipeline.annotate(annotation);
 		//pipeline.prettyPrint(annotation, out);
 		
 		List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
 	    int i = 0;
+	    System.out.print(sentences.size());
 		for (CoreMap sentence:sentences){
 	    	System.out.println("sentences " + i++);
+	    	System.out.println((sentence.get(TokensAnnotation.class)).size());
 	    	for (CoreLabel token:sentence.get(TokensAnnotation.class)){
 	    		String word = token.get(TextAnnotation.class);
 	    		//String pos = token.get(PartOfSpeechAnnotation.class);
@@ -56,9 +58,9 @@ public class SVM {
 	    		//System.out.println(word + " " + ner);
 	    	}
 	    	//Tree tree = sentence.get(TreeAnnotation.class);
-	    	SemanticGraph tree = sentence.get(BasicDependenciesAnnotation.class);
+	    	//SemanticGraph tree = sentence.get(BasicDependenciesAnnotation.class);
 
-	    	System.out.println(tree);
+	    	//System.out.println(tree);
 	    	
 	    }
     	

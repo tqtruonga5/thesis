@@ -2,6 +2,8 @@ package vn.edu.hcmut.emrre.core.feature;
 
 import java.util.List;
 
+import edu.stanford.nlp.util.CoreMap;
+import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
 import vn.edu.hcmut.emrre.core.entity.Word;
 
@@ -10,9 +12,12 @@ public class ContextFeature extends Feature {
     public ContextFeature(String name, double value) {
         super(name, value);
     }
-
-    double distance(List<Word> words,Relation relation){
-        return 0;
+    
+    //the number of words between two concepts
+    public static double distance(Relation relation){
+    	Concept concept1 = relation.getPreConcept();
+    	Concept concept2 = relation.getPosConcept();
+    	return (concept2.getBegin() > concept1.getEnd()) ? concept2.getBegin() - concept1.getEnd() - 1 : concept1.getBegin() - concept2.getEnd() - 1;
     }
     
     double posTag(List<Word> words,Relation relation){
@@ -22,7 +27,7 @@ public class ContextFeature extends Feature {
     double bigram(List<Word> words,Relation relation){
         return 0;
     }
-    
+   
 //    Feature[] buildFeature(){
 //        return {FeatureNode(1,distance(words, relation)),
 //            FeatureNode(2,0),
