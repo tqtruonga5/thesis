@@ -73,7 +73,7 @@ public class DataReader {
                 }
 
                 Concept concept = new Concept(fileName, conceptContent, lineIndex, begin, end,
-                        Concept.Type.valueOf(type.toUpperCase()));
+                        Concept.Type.valueOf(type.toUpperCase()), concepts.size());
                 // System.err.println(concept);
                 concepts.add(concept);
             }
@@ -128,9 +128,12 @@ public class DataReader {
                 Concept concept1 = findConcept(concepts, conceptContent1, lineIndex1, begin1, end1);
                 Concept concept2 = findConcept(concepts, conceptContent2, lineIndex2, begin2, end2);
                 if (concept1 != null && concept2 != null) {
-                    Relation relation = new Relation(fileName, concept1, concept2, Relation.Type.valueOf(relationType));
+                    Relation relation = new Relation(fileName, concept1.getKey(), concept2.getKey(), Relation.Type.valueOf(relationType), relations.size());
                     // System.out.println(relation);
                     relations.add(relation);
+                    //add each concept key to the relateLst of other
+                    concept1.addRelateLst(concept2.getKey());
+                    concept2.addRelateLst(concept1.getKey());
                 }
             }
 
@@ -163,15 +166,15 @@ public class DataReader {
     }
 
     public static void main(String[] args) {
-        String inputDocFile = "i2b2data/beth/txt/record-14.txt";
-        String inputConceptFile = "i2b2data/beth/concept/record-14.con";
-        String inputRelationFile = "i2b2data/beth/rel/record-14.rel";
+        String inputDocFile = "i2b2data/beth/txt/record-13.txt";
+        String inputConceptFile = "i2b2data/beth/concept/record-13.con";
+        String inputRelationFile = "i2b2data/beth/rel/record-13.rel";
         DataReader dataReader = new DataReader();
         List<DocLine> docLines = dataReader.readDocument(inputDocFile);
         List<Concept> concepts = dataReader.readConcepts(inputConceptFile);
         List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
         
-        dataReader.showData(relations);
+        dataReader.showData(concepts);
     }
     
     public void showData(List list){

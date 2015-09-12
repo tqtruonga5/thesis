@@ -14,9 +14,9 @@ public class ContextFeature extends Feature {
     }
     
     //the number of words between two concepts
-    public static double distance(Relation relation){
-    	Concept concept1 = relation.getPreConcept();
-    	Concept concept2 = relation.getPosConcept();
+    public static double distance(Relation relation, List<Concept> conceptLst){
+    	Concept concept1 = Concept.getConcept(relation.getPreConcept(), conceptLst);
+    	Concept concept2 = Concept.getConcept(relation.getPosConcept(), conceptLst);
     	return (concept2.getBegin() > concept1.getEnd()) ? concept2.getBegin() - concept1.getEnd() - 1 : concept1.getBegin() - concept2.getEnd() - 1;
     }
     

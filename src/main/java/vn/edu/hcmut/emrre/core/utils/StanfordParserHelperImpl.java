@@ -3,6 +3,7 @@ package vn.edu.hcmut.emrre.core.utils;
 import java.util.List;
 import java.util.Properties;
 
+import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
 import vn.edu.hcmut.emrre.core.entity.Word;
 import edu.stanford.nlp.ling.CoreAnnotations;
@@ -19,9 +20,9 @@ public class StanfordParserHelperImpl implements StanfordParserHelper{
         return null;
     }
 
-    public CoreMap parseDataToCoreMap(String docLine, Relation relation) {
+    public CoreMap parseDataToCoreMap(String docLine, Relation relation, List<Concept> conceptLst) {
         // TODO Auto-generated method stub
-    	int aConceptBeginPos = relation.getPreConcept().getBegin();
+    	int aConceptBeginPos = Concept.getConcept(relation.getPreConcept(), conceptLst).getBegin();
 		StanfordCoreNLP pipeline = new StanfordCoreNLP();
 		Annotation annotation = new Annotation(docLine);
 		pipeline.annotate(annotation);
