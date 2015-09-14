@@ -14,34 +14,23 @@ import vn.edu.hcmut.emrre.core.feature.ContextFeature;
 import vn.edu.hcmut.emrre.core.io.DataReader;
 import vn.edu.hcmut.emrre.core.utils.StanfordParserHelper;
 import vn.edu.hcmut.emrre.core.utils.StanfordParserHelperImpl;
+import vn.edu.hcmut.emrre.training.EmrTrain;
 import de.bwaldvogel.liblinear.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // duyet tat ca cac file
-    	// 1 file
     	String inputDocFile = "i2b2data/beth/txt/record-14.txt";
         String inputConceptFile = "i2b2data/beth/concept/record-14.con";
         String inputRelationFile = "i2b2data/beth/rel/record-14.rel";
         double autoValue = 0;
         HashMap<String, Double> dictionary  = new HashMap<String, Double>();
-        
         DataReader dataReader = new DataReader();
         List<DocLine> docLines = dataReader.readDocument(inputDocFile);
         List<Concept> concepts = dataReader.readConcepts(inputConceptFile);
         List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
-        //chua tat ca data training
-        List<Double[][]> trainingData;
-        System.out.println(relations.size());
-        for (int i = 0; i < concepts.size() - 1 ; i ++)
-        	for (int j = i + 1; j < concepts.size(); j++){
-        		//check if there doesn't exist relation between 2 concepts
-        		//add a relation NONE into relations list
-        		if (!Relation.hasRelation(concepts.get(i), concepts.get(j))){
-        			relations.add(new Relation(concepts.get(i).getKey(), concepts.get(j).getKey(), Relation.Type.NONE, relations.size()));
-        		}
-        	}
-        System.out.println(relations.size());
+    	EmrTrain train = new EmrTrain();
+        train.training(docLines, concepts, relations);
+
 //        preprocess
 //        extract feature
 //        duyet trong Concept tat ca cac cap co the 

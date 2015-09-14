@@ -1,6 +1,14 @@
 package vn.edu.hcmut.emrre.core.entity;
 
 import java.util.List;
+import java.util.Properties;
+
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
+import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.Annotator;
+import edu.stanford.nlp.pipeline.StanfordCoreNLP;
+import edu.stanford.nlp.util.CoreMap;
 
 public class Relation {
     private String fileName;
@@ -68,10 +76,11 @@ public class Relation {
         TrIP, TrAP, TrNAP, TrCP, TrWP, TeRP, TeCP, PIP, NONE
     }
     
-    public static boolean hasRelation(Concept first, Concept second) {
+    public static boolean hasRelation(Concept first, Concept second, DocLine docLine) {
 		// TODO Auto-generated method stub
 		boolean check = false;
-		if (first.getLine() == second.getLine()){
+		//if (docLine != null & first.getLine() == second.getLine() & inASentences(first.getBegin(), second.getBegin(), docLine.getContent())){	
+		if (docLine != null & first.getLine() == second.getLine()){
 			List<Integer> relateLst1 = first.getRelateLst();
 			for (int i = 0; i < relateLst1.size(); i++){
 				if (relateLst1.get(i) == second.getKey()){
@@ -83,6 +92,26 @@ public class Relation {
 		return check;
 	}
     
+    public static boolean inASentences(int begin1, int begin2, String line){
+    	boolean check = false;
+    	Properties props = new Properties();
+    	props.put("annotators", "tokenize, ssplit, pos");
+    	StanfordCoreNLP stan = new StanfordCoreNLP(props);
+    	Annotation annotation = new Annotation(line);
+    	stan.annotate(annotation);
+    	List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
+    	int currentPos = 0;
+    	for(CoreMap sentence:sentences){
+    		currentPos += (sentence.get(TokensAnnotation.class)).size();
+    		boolean check1 = currentPos > begin1;
+    		boolean check2 = currentPos > begin2;
+    		if (check1 || check2){
+    			check = !(check1 ^ check2);
+    			break;
+    		}
+    	}
+    	return check;
+    }
     public static double valueOfType(Type type){
     	switch (type){
     	case TrIP:

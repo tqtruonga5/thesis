@@ -43,13 +43,6 @@ public class DocLine {
     }
     
     public static DocLine getDocLine(List<DocLine> docLines, int lineIndex){
-    	DocLine result = null;
-    	for (int i = 0; i < docLines.size(); i++){
-    		result = docLines.get(i);
-    		if (result.getLineIndex() == lineIndex){
-    			break;
-    		}
-    	}
-    	return result;
+    	return docLines.get(lineIndex - 1);
     }
 }
