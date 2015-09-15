@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Concept {
-    
-    
+
     private String fileName;
     private String content;
     private Type type;
@@ -16,32 +15,32 @@ public class Concept {
     private List<Integer> relateLst;
 
     public Concept(String fileName, String content, int line, int begin, int end, Type type, int key) {
-    	this.fileName = fileName;
+        this.fileName = fileName;
         this.content = content;
         this.line = line;
         this.begin = begin;
         this.end = end;
         this.type = type;
         this.key = key;
-        this.relateLst = new ArrayList<Integer>() ;
+        this.relateLst = new ArrayList<Integer>();
     }
 
-    public List<Integer> getRelateLst(){
-    	return this.relateLst;
+    public List<Integer> getRelateLst() {
+        return this.relateLst;
     }
-    
-    public void addRelateLst(int key){
-    	relateLst.add(key);
+
+    public void addRelateLst(int key) {
+        relateLst.add(key);
     }
-    
-    public static Concept getConcept(int key, List<Concept> conceptLst){
-    	return conceptLst.get(key);
+
+    public static Concept getConcept(int key, List<Concept> conceptLst) {
+        return conceptLst.get(key);
     }
-    
-    public int getKey(){
-    	return this.key;
+
+    public int getKey() {
+        return this.key;
     }
-    
+
     public String getFileName() {
         return fileName;
     }
@@ -81,7 +80,6 @@ public class Concept {
     public void setLine(int line) {
         this.line = line;
     }
-    
 
     public String getContent() {
         return content;
@@ -93,7 +91,9 @@ public class Concept {
 
     @Override
     public String toString() {
-        return String.format("c=%s -lineIndex =%d - begin=%d - end=%d - type=%s - key=%d - number of relate followed=%d", content,line, begin, end, type, key, this.relateLst.size());
+        return String.format(
+                "c=%s -lineIndex =%d - begin=%d - end=%d - type=%s - key=%d - number of relate followed=%d", content,
+                line, begin, end, type, key, this.relateLst.size());
     }
 
     public static enum Type {

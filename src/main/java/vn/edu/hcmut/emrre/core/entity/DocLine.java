@@ -41,8 +41,8 @@ public class DocLine {
     public void setLineIndex(int lineIndex) {
         this.lineIndex = lineIndex;
     }
-    
-    public static DocLine getDocLine(List<DocLine> docLines, int lineIndex){
-    	return docLines.get(lineIndex - 1);
+
+    public static DocLine getDocLine(List<DocLine> docLines, int lineIndex) {
+        return docLines.get(lineIndex - 1);
     }
 }
