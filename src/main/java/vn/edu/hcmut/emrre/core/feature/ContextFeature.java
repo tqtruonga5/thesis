@@ -2,10 +2,9 @@ package vn.edu.hcmut.emrre.core.feature;
 
 import java.util.List;
 
-import edu.stanford.nlp.util.CoreMap;
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
-import vn.edu.hcmut.emrre.core.entity.Word;
+import edu.stanford.nlp.ling.Word;
 
 public class ContextFeature extends Feature {
     

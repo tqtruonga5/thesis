@@ -15,10 +15,10 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class StanfordParserHelperImpl implements StanfordParserHelper{
 
-    public List<Word> parseDataToListWord(String sentence, Relation relation) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+//    public List<Word> parseDataToListWord(String sentence, Relation relation) {
+//        // TODO Auto-generated method stub
+//        return null;
+//    }
 
     public CoreMap parseDataToCoreMap(String docLine, Relation relation, List<Concept> conceptLst) {
         // TODO Auto-generated method stub

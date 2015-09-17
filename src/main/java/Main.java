@@ -1,21 +1,12 @@
-import java.io.File;
 import java.io.IOException;
-import java.lang.instrument.Instrumentation;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
-import edu.stanford.nlp.util.CoreMap;
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.DocLine;
 import vn.edu.hcmut.emrre.core.entity.Relation;
-import vn.edu.hcmut.emrre.core.feature.ContextFeature;
 import vn.edu.hcmut.emrre.core.io.DataReader;
-import vn.edu.hcmut.emrre.core.utils.StanfordParserHelper;
-import vn.edu.hcmut.emrre.core.utils.StanfordParserHelperImpl;
 import vn.edu.hcmut.emrre.training.EmrTrain;
-import de.bwaldvogel.liblinear.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {

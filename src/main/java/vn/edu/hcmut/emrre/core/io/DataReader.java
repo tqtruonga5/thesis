@@ -13,6 +13,9 @@ import java.util.regex.Pattern;
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.DocLine;
 import vn.edu.hcmut.emrre.core.entity.Relation;
+import vn.edu.hcmut.emrre.core.entity.record.Record;
+import vn.edu.hcmut.emrre.core.entity.record.RecordDAO;
+import vn.edu.hcmut.emrre.core.entity.record.RecordDAOImpl;
 
 public class DataReader {
     private Pattern conceptPattern = Pattern.compile("^c=\"(.*)?\"\\s(\\d+):(\\d+)\\s(\\d+):(\\d+)\\|\\|t=\"(.*)?\"$");
@@ -25,7 +28,7 @@ public class DataReader {
             // Get file from resources folder
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
             InputStreamReader is = new InputStreamReader(classLoader.getResourceAsStream(inputFile));
-            BufferedReader br = new BufferedReader(is); 
+            BufferedReader br = new BufferedReader(is);
 
             String fileName = getFileNameFromPath(inputFile);
             String content = "";
@@ -128,10 +131,11 @@ public class DataReader {
                 Concept concept1 = findConcept(concepts, conceptContent1, lineIndex1, begin1, end1);
                 Concept concept2 = findConcept(concepts, conceptContent2, lineIndex2, begin2, end2);
                 if (concept1 != null && concept2 != null) {
-                    Relation relation = new Relation(fileName, concept1.getKey(), concept2.getKey(), Relation.Type.valueOf(relationType), relations.size());
+                    Relation relation = new Relation(fileName, concept1.getKey(), concept2.getKey(),
+                            Relation.Type.valueOf(relationType), relations.size());
                     // System.out.println(relation);
                     relations.add(relation);
-                    //add each concept key to the relateLst of other
+                    // add each concept key to the relateLst of other
                     concept1.addRelateLst(concept2.getKey());
                     concept2.addRelateLst(concept1.getKey());
                 }
@@ -173,13 +177,24 @@ public class DataReader {
         List<DocLine> docLines = dataReader.readDocument(inputDocFile);
         List<Concept> concepts = dataReader.readConcepts(inputConceptFile);
         List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
-        
-        dataReader.showData(concepts);
+
+        String name = concepts.get(0).getFileName().split("\\.")[0];
+        RecordDAO recordDAO = new RecordDAOImpl();
+        Record record = recordDAO.findByName(name);
+
+        for (Concept each : concepts) {
+            System.out.println(each.toString());
+            System.out.println(each.getLine());
+            System.err.println(record.getSentences().get(each.getLine() - 1).getWords().get(each.getBegin()));
+        }
+
+        // System.err.println(arr[0]);
+        // dataReader.showData(concepts);
     }
-    
-    public void showData(List list){
+
+    public void showData(List list) {
         Iterator itr = list.iterator();
-        while(itr.hasNext()){
+        while (itr.hasNext()) {
             System.out.println(itr.next());
         }
     }
