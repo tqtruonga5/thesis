@@ -9,8 +9,6 @@ public interface WordDAO {
 
     public Word findById(Long id);
 
-    public List<Word> findBy(String recordName, Long lineIndex);
-
     public void delete(Word word);
 
     public void delete(Long id);

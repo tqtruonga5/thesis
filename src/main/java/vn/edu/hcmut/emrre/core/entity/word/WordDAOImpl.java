@@ -28,9 +28,6 @@ public class WordDAOImpl implements WordDAO {
         return word;
     }
 
-    public List<Word> findBy(String recordName, Long lineIndex) {
-        return null;
-    }
 
     public void delete(Word word) {
         Session session = HibernateUtil.getSessionFactory().openSession();
