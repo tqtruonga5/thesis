@@ -16,7 +16,7 @@ import edu.stanford.nlp.ling.CoreLabel;
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.DocLine;
 import vn.edu.hcmut.emrre.core.entity.Relation;
-import vn.edu.hcmut.emrre.core.feature.ContextFeature;
+import vn.edu.hcmut.emrre.core.feature.ContextFeatureExtractor;
 import vn.edu.hcmut.emrre.core.svm.SVM;
 import vn.edu.hcmut.emrre.core.utils.StanfordParserHelperImpl;
 
@@ -122,26 +122,26 @@ public class EmrTrain {
                 continue;
             }
             try {
-                aVector[0] = ContextFeature.distance(preConcept, posConcept);
-                double[] vector3dimens = ContextFeature.preThreeWords(preConcept.getBegin(), coreLabelLst);
+                aVector[0] = ContextFeatureExtractor.distance(preConcept, posConcept);
+                double[] vector3dimens = ContextFeatureExtractor.preThreeWords(preConcept.getBegin(), coreLabelLst);
                 aVector[1] = vector3dimens[0];
                 aVector[2] = vector3dimens[1];
                 aVector[3] = vector3dimens[2];
-                vector3dimens = ContextFeature.preThreeWords(posConcept.getBegin(), coreLabelLst);
+                vector3dimens = ContextFeatureExtractor.preThreeWords(posConcept.getBegin(), coreLabelLst);
                 aVector[4] = vector3dimens[0];
                 aVector[5] = vector3dimens[1];
                 aVector[6] = vector3dimens[2];
-                vector3dimens = ContextFeature.posThreeWords(preConcept.getEnd(), coreLabelLst);
+                vector3dimens = ContextFeatureExtractor.posThreeWords(preConcept.getEnd(), coreLabelLst);
 
                 aVector[7] = vector3dimens[0];
                 aVector[8] = vector3dimens[1];
                 aVector[9] = vector3dimens[2];
-                vector3dimens = ContextFeature.posThreeWords(posConcept.getEnd(), coreLabelLst);
+                vector3dimens = ContextFeatureExtractor.posThreeWords(posConcept.getEnd(), coreLabelLst);
                 aVector[10] = vector3dimens[0];
                 aVector[11] = vector3dimens[1];
                 aVector[12] = vector3dimens[2];
-                aVector[13] = ContextFeature.lemma(preConcept, coreLabelLst);
-                aVector[14] = ContextFeature.lemma(posConcept, coreLabelLst);
+                aVector[13] = ContextFeatureExtractor.lemma(preConcept, coreLabelLst);
+                aVector[14] = ContextFeatureExtractor.lemma(posConcept, coreLabelLst);
                 aVector[DIMENSIONS] = Relation.valueOfType(relations.get(i).getType());
                 EmrTrain.trainingData.add(aVector);
             } catch (IndexOutOfBoundsException e) {

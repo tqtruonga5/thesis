@@ -37,12 +37,12 @@ import vn.edu.hcmut.emrre.training.EmrTrain;
 
 public class SVM {
     
-    private static final String FILEMODEL;
-    
-    static{
-        FILEMODEL = "model";
-    }
-    
+    private static final String FILEMODEL = "model";
+//    
+//    static{
+//        FILEMODEL = "model";
+//    }
+//    
     private Feature[] parse2FeatureNode(Double[] vector, int dimension){
         List<Feature> arrayLst = new ArrayList<Feature>();
         for (int i = 0; i < dimension; i++){
@@ -62,12 +62,15 @@ public class SVM {
         int k;
         svm.l = numberRecords;
         svm.n = dimension;
+        
         Feature[][] feature = new FeatureNode[svm.l][];
         double[] label = new double[svm.l];
+        
         for (int i = 0; i < svm.l; i ++){
             feature[i] = parse2FeatureNode(trainingData.get(i), dimension);
             label[i] = trainingData.get(i)[dimension];
         }
+        
         svm.x = feature;
         svm.y = label;
         SolverType solver = SolverType.L1R_LR; // -s 0

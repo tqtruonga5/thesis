@@ -1,7 +1,9 @@
 package vn.edu.hcmut.emrre.core.feature;
 
-import vn.edu.hcmut.emrre.core.entity.DocLine;
+import java.util.List;
+
 
 public interface FeatureExtractor {
-    double extract(DocLine sentence);
+    
+//    public List<Double> buildFeatures();
 }
