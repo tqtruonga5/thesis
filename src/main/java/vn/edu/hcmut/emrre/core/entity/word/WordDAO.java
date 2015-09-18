@@ -14,4 +14,6 @@ public interface WordDAO {
     public void delete(Long id);
 
     public List<Word> findAll();
+    
+    public List<Word> findByIdCondition(Long id);
 }

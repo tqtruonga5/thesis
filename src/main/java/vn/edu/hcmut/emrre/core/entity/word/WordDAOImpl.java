@@ -28,12 +28,18 @@ public class WordDAOImpl implements WordDAO {
         return word;
     }
 
-
     public void delete(Word word) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         session.delete(word);
         session.getTransaction().commit();
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<Word> findByIdCondition(Long id) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        List<Word> words = (List<Word>) session.createQuery("from Word w where w.id >= :id").setLong("id", id).list();
+        return words;
     }
 
     public void delete(Long id) {

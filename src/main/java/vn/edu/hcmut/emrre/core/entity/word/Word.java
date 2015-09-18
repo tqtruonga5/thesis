@@ -2,6 +2,8 @@ package vn.edu.hcmut.emrre.core.entity.word;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -16,7 +18,7 @@ public class Word {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "index")
+    @Column(name = "position")
     private long index;
 
     @ManyToOne
@@ -27,6 +29,7 @@ public class Word {
     private String content;
 
     @Column(name = "ibo_tag")
+    @Enumerated(EnumType.STRING)
     private IBOTag iboTag;
 
     @Column(name = "pos_tag")
@@ -35,6 +38,7 @@ public class Word {
     @Column(name = "orth_tag")
     private String orthTag;
 
+    @Column(name = "sessionTag")
     private String sessionTag;
 
     @Column(name = "umls_tag")
