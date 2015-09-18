@@ -75,17 +75,27 @@ public class Relation {
         TrIP, TrAP, TrNAP, TrCP, TrWP, TeRP, TeCP, PIP, NONE
     }
 
-    public static boolean hasRelation(Concept first, Concept second, DocLine docLine) {
+    public static boolean hasRelation(Concept first, Concept second) {
         // TODO Auto-generated method stub
         boolean check = false;
         // if (docLine != null & first.getLine() == second.getLine() &
         // inASentences(first.getBegin(), second.getBegin(),
         // docLine.getContent())){
+        List<Integer> relateLst1 = first.getRelateLst();
+        for (int i = 0; i < relateLst1.size(); i++) {
+            if (relateLst1.get(i) == second.getKey()) {
+                check = true;
+                break;
+            }
+        }
+        return check;
+    }
 
-        if (first.getLine() == second.getLine()) {
-            List<Integer> relateLst1 = first.getRelateLst();
-            for (int i = 0; i < relateLst1.size(); i++) {
-                if (relateLst1.get(i) == second.getKey()) {
+    public static boolean canRelate(Concept first, Concept second) {
+        return (first.getType() == Concept.Type.PROBLEM || second.getType() == Concept.Type.PROBLEM)
+                & first.getLine() == second.getLine();
+    }
+<<<<<<< .mine
                     check = true;
                     break;
                 }
@@ -93,10 +103,15 @@ public class Relation {
         }
         return check;
     }
+=======
 
-    public static boolean canRelate(Concept first, Concept second) {
-        return first.getType() == Concept.Type.PROBLEM || second.getType() == Concept.Type.PROBLEM;
-    }
+
+
+
+
+
+
+>>>>>>> .theirs
 
     public static boolean inASentences(int begin1, int begin2, String line) {
         boolean check = false;
@@ -135,10 +150,33 @@ public class Relation {
             return 6;
         case TeCP:
             return 7;
-        case NONE:
+        case PIP:
             return 8;
         default:
             return 0;
+        }
+    }
+    
+    public static Relation.Type typeOfDouble(int value){
+        switch (value) {
+        case 1:
+            return Type.TrIP;
+        case 2:
+            return Type.TrAP;
+        case 3:
+            return Type.TrNAP;
+        case 4:
+            return Type.TrCP;
+        case 5:
+            return Type.TrWP;
+        case 6:
+            return Type.TeRP;
+        case 7:
+            return Type.TeCP;
+        case 8:
+            return Type.PIP;
+        default:
+            return Type.NONE;
         }
     }
 
@@ -146,8 +184,58 @@ public class Relation {
     public String toString() {
         return String.format("%s | %s |%s", preConcept, type, posConcept);
     };
+<<<<<<< .mine
+        case TrAP:
+            return 2;
+        case TrNAP:
+            return 3;
+        case TrCP:
+            return 4;
+        case TrWP:
+            return 5;
+        case TeRP:
+            return 6;
+        case TeCP:
+            return 7;
+        case NONE:
+            return 8;
+        default:
+            return 0;
+        }
+    }
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> .theirs
 
     // public static void main(String[] args) {
     // System.out.println(Type.valueOf("TrIP"));
     // }
+<<<<<<< .mine
+
+    // public static void main(String[] args) {
+    // System.out.println(Type.valueOf("TrIP"));
+    // }
+=======
+
+
+
+
+>>>>>>> .theirs
 }

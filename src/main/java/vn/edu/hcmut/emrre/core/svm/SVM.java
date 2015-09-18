@@ -3,6 +3,7 @@ package vn.edu.hcmut.emrre.core.svm;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -30,73 +31,87 @@ import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.BasicDependenciesA
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
+import vn.edu.hcmut.emrre.core.entity.Relation;
+import vn.edu.hcmut.emrre.testing.EmrTest;
+import vn.edu.hcmut.emrre.training.EmrTrain;
 
 public class SVM {
+    
+    private static final String FILEMODEL;
+    
+    static{
+        FILEMODEL = "model";
+    }
+    
+    private Feature[] parse2FeatureNode(Double[] vector, int dimension){
+        List<Feature> arrayLst = new ArrayList<Feature>();
+        for (int i = 0; i < dimension; i++){
+            if (vector[i] != -1){
+                arrayLst.add(new FeatureNode(i + 1, vector[i]));
+            }
+        }
+        Feature[] result = new FeatureNode[arrayLst.size()];
+        for (int i = 0; i < arrayLst.size(); i++){
+            result[i] = arrayLst.get(i);
+        }
+        return result;
+    }
+    
+    public void svmTrainCore(List<Double[]> trainingData, int numberRecords, int dimension) throws IOException{
+        Problem svm = new Problem();
+        int k;
+        svm.l = numberRecords;
+        svm.n = dimension;
+        Feature[][] feature = new FeatureNode[svm.l][];
+        double[] label = new double[svm.l];
+        for (int i = 0; i < svm.l; i ++){
+            feature[i] = parse2FeatureNode(trainingData.get(i), dimension);
+            label[i] = trainingData.get(i)[dimension];
+        }
+        svm.x = feature;
+        svm.y = label;
+        SolverType solver = SolverType.L1R_LR; // -s 0
+        double C = 1.0; // cost of constraints violation
+        double eps = 0.01; // stopping criteria
+
+        Parameter parameter = new Parameter(solver, C, eps);
+        Model model = Linear.train(svm, parameter);
+        File fileModel = new File(FILEMODEL);
+        model.save(fileModel);
+        // load model or use it directly
+        //model = Model.load(modelFile);
+    }
+    
+    public double svmTestCore(Double[] dataTest) throws IOException{
+        File fileModel = new File(FILEMODEL);
+        Model model = Model.load(fileModel);
+        Feature[] instance = parse2FeatureNode(dataTest, EmrTrain.DIMENSIONS);
+        double prediction = Linear.predict(model, instance);
+        return prediction;
+    }
+    
     public static void main(String[] args) throws IOException {
 
-    	//nlp
-    	PrintWriter out;
-		out = new PrintWriter(System.out);
-		Properties props = new Properties();
-		props.setProperty("annotators",	"tokenize, ssplit, pos");
-		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-		Annotation annotation = new Annotation("She presented with. Hello,");
-		pipeline.annotate(annotation);
-		//pipeline.prettyPrint(annotation, out);
-		
-		List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
-	    int i = 0;
-	    System.out.print(sentences.size());
-		for (CoreMap sentence:sentences){
-	    	System.out.println("sentences " + i++);
-	    	System.out.println((sentence.get(TokensAnnotation.class)).size());
-	    	for (CoreLabel token:sentence.get(TokensAnnotation.class)){
-	    		String word = token.get(TextAnnotation.class);
-	    		//String pos = token.get(PartOfSpeechAnnotation.class);
-	    		//String lemma = token.get(LemmaAnnotation.class);
-	    		//String ner = token.get(NamedEntityTagAnnotation.class); 
-	    		//System.out.println(word + " " + ner);
-	    	}
-	    	//Tree tree = sentence.get(TreeAnnotation.class);
-	    	//SemanticGraph tree = sentence.get(BasicDependenciesAnnotation.class);
-
-	    	//System.out.println(tree);
-	    	
-	    }
-    	
-		//svm
-//        Problem problem = new Problem();
-//        problem.l = 8;
-//        problem.n = 2;
-//        // Feature[][] = new F
-//        Feature[][] train = { { new FeatureNode(1, 2), new FeatureNode(2, 3)},
-//                              { new FeatureNode(1, 2),new FeatureNode(2, 2) },
-//                              { new FeatureNode(1, 3),new FeatureNode(2, 2) },
-//                              { new FeatureNode(1, 3),new FeatureNode(2, 3) },
-//                              { new FeatureNode(1, 1), new FeatureNode(2, 4)},
-//                              { new FeatureNode(1, 1),new FeatureNode(2, 1) },
-//                              { new FeatureNode(1, 4),new FeatureNode(2, 4) },
-//                              { new FeatureNode(1, 4),new FeatureNode(2, 1) }
-//
-//        };
-//        problem.x = train;
-//        // problem.x = {{new Feature(1,4),new Feature(2,4)}};
-//         problem.y = new double[]{1,1,1,1,-1,-1,-1,-1};
-//         
-//         SolverType solver = SolverType.MCSVM_CS; // -s 0
-//         double C = 1.0;    // cost of constraints violation
-//         double eps = 0.01; // stopping criteria
-//
-//         Parameter parameter = new Parameter(solver, C, eps);
-//         Model model = Linear.train(problem, parameter);
-//         File modelFile = new File("model");
-//         model.save(modelFile);
-//         // load model or use it directly
-//         model = Model.load(modelFile);
-//
-//         Feature[] instance = { new FeatureNode(1, 2), new FeatureNode(2, 2) };
-//         double prediction = Linear.predict(model, instance);
-//         
-//         System.err.println(prediction);
+        EmrTrain train = new EmrTrain();
+        train.readDataTraining(EmrTrain.FILE);
+        int result = 0;
+        int result1 = 0;
+        int total = 0;
+        for (int i = 0; i < EmrTrain.trainingData.size(); i++){
+        	Double[] vector = EmrTrain.trainingData.get(i);
+        	EmrTest test = new EmrTest(vector);
+        	Relation.Type label = test.test();
+        	if (label != Relation.Type.NONE){
+        	    total ++;
+        	}
+        	if (Relation.valueOfType(label) == vector[EmrTrain.DIMENSIONS]){
+        	    result++;
+        	    if (label != Relation.Type.NONE)
+        	        result1 ++;
+        	}
+        	System.out.print("  " + Relation.valueOfType(label));
+        }
+        System.out.print("\nTotal true (include NONE): " + result + "/" + EmrTrain.trainingData.size());
+        System.out.print("\nTotal true: " + result1 + "/" + total);
     }
 }

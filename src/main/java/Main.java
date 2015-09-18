@@ -10,9 +10,9 @@ import vn.edu.hcmut.emrre.training.EmrTrain;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-    	String inputDocFile = "i2b2data/beth/txt/record-14.txt";
-        String inputConceptFile = "i2b2data/beth/concept/record-14.con";
-        String inputRelationFile = "i2b2data/beth/rel/record-14.rel";
+    	String inputDocFile = "i2b2data/beth/txt/record-106.txt";
+        String inputConceptFile = "i2b2data/beth/concept/record-106.con";
+        String inputRelationFile = "i2b2data/beth/rel/record-106.rel";
         double autoValue = 0;
         HashMap<String, Double> dictionary  = new HashMap<String, Double>();
         DataReader dataReader = new DataReader();
@@ -21,6 +21,10 @@ public class Main {
         List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
     	EmrTrain train = new EmrTrain();
         train.training(docLines, concepts, relations);
+//        StanfordParserHelperImpl stant = new StanfordParserHelperImpl();
+//        long start = System.nanoTime();
+//        stant.parseDataFromDocLines(docLines);
+        //System.out.println("Time run: " + (System.nanoTime() - start));
 
 //        preprocess
 //        extract feature
