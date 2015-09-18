@@ -3,11 +3,11 @@ package vn.edu.hcmut.emrre.core.feature;
 import java.util.HashMap;
 import java.util.List;
 
-import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
-import edu.stanford.nlp.ling.CoreLabel;
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
-import vn.edu.hcmut.emrre.core.entity.Word;
+import vn.edu.hcmut.emrre.core.entity.word.Word;
+import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
+import edu.stanford.nlp.ling.CoreLabel;
 
 public class ContextFeature extends Feature {
     private static HashMap<String, Double> dictionary;
