@@ -3,19 +3,19 @@ package vn.edu.hcmut.emrre.core.feature;
 import java.util.HashMap;
 import java.util.List;
 
-import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
-import edu.stanford.nlp.ling.CoreLabel;
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
-import vn.edu.hcmut.emrre.core.entity.Word;
+import vn.edu.hcmut.emrre.core.entity.word.Word;
+import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
+import edu.stanford.nlp.ling.CoreLabel;
 
-public class ContextFeature extends Feature {
+public class ContextFeatureExtractor implements FeatureExtractor{
+    
     private static HashMap<String, Double> dictionary;
 
     private static double autoValue;
 
-    public ContextFeature(String name, double value) {
-        super(name, value);
+    public ContextFeatureExtractor() {
     }
 
     static {
@@ -37,10 +37,10 @@ public class ContextFeature extends Feature {
 
                 String word = tokens.get(conceptPosition - i).get(LemmaAnnotation.class).toLowerCase();
 
-                if (ContextFeature.dictionary.get(word) == null) {
-                    ContextFeature.dictionary.put(word, ContextFeature.autoValue++);
+                if (ContextFeatureExtractor.dictionary.get(word) == null) {
+                    ContextFeatureExtractor.dictionary.put(word, ContextFeatureExtractor.autoValue++);
                 }
-                result[3 - i] = ContextFeature.dictionary.get(word);
+                result[3 - i] = ContextFeatureExtractor.dictionary.get(word);
             } else {
                 result[3 - i] = -1;
             }
@@ -54,10 +54,10 @@ public class ContextFeature extends Feature {
         for (int i = 1; i <= 3; i++) {
             if (conceptPosition + i < tokens.size()) {
                 String word = tokens.get(conceptPosition + i).get(LemmaAnnotation.class).toLowerCase();
-                if (ContextFeature.dictionary.get(word) == null) {
-                    ContextFeature.dictionary.put(word, ContextFeature.autoValue++);
+                if (ContextFeatureExtractor.dictionary.get(word) == null) {
+                    ContextFeatureExtractor.dictionary.put(word, ContextFeatureExtractor.autoValue++);
                 }
-                result[i - 1] = ContextFeature.dictionary.get(word);
+                result[i - 1] = ContextFeatureExtractor.dictionary.get(word);
             } else {
                 result[i - 1] = -1;
             }
@@ -71,10 +71,10 @@ public class ContextFeature extends Feature {
         for (int i = concept.getBegin(); i <= concept.getEnd(); i++) {
             words += tokens.get(i).getString(LemmaAnnotation.class).toLowerCase();
         }
-        if (ContextFeature.dictionary.get(words) == null) {
-            ContextFeature.dictionary.put(words, ContextFeature.autoValue++);
+        if (ContextFeatureExtractor.dictionary.get(words) == null) {
+            ContextFeatureExtractor.dictionary.put(words, ContextFeatureExtractor.autoValue++);
         }
-        return ContextFeature.dictionary.get(words);
+        return ContextFeatureExtractor.dictionary.get(words);
     }
 
     double posTag(List<Word> words, Relation relation) {

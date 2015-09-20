@@ -3,16 +3,16 @@ package vn.edu.hcmut.emrre.core.utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.hcmut.emrre.core.entity.Concept;
+import vn.edu.hcmut.emrre.core.entity.DocLine;
+import vn.edu.hcmut.emrre.core.entity.Relation;
+import vn.edu.hcmut.emrre.core.entity.word.Word;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
-import vn.edu.hcmut.emrre.core.entity.Concept;
-import vn.edu.hcmut.emrre.core.entity.DocLine;
-import vn.edu.hcmut.emrre.core.entity.Relation;
-import vn.edu.hcmut.emrre.core.entity.Word;
 
 public class StanfordParserHelperImpl {
     protected static StanfordCoreNLP pipeline;
