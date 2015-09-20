@@ -70,7 +70,7 @@ public class SVM {
         }
         svm.x = feature;
         svm.y = label;
-        SolverType solver = SolverType.L1R_LR; // -s 0
+        SolverType solver = SolverType.L2R_LR_DUAL; // -s 0
         double C = 1.0; // cost of constraints violation
         double eps = 0.01; // stopping criteria
 
@@ -101,7 +101,7 @@ public class SVM {
         	Double[] vector = EmrTrain.trainingData.get(i);
         	EmrTest test = new EmrTest(vector);
         	Relation.Type label = test.test();
-        	if (label != Relation.Type.NONE){
+        	if (vector[EmrTrain.DIMENSIONS] != 0){
         	    total ++;
         	}
         	if (Relation.valueOfType(label) == vector[EmrTrain.DIMENSIONS]){

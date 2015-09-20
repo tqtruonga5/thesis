@@ -40,10 +40,14 @@ public class EmrTrain {
 
     private boolean checkInput(Concept concept, List<CoreLabel> docline) {
         String fact = "";
-        for (int i = concept.getBegin(); i < concept.getEnd(); i++) {
-            fact += docline.get(i).get(TextAnnotation.class) + " ";
+        try {
+            for (int i = concept.getBegin(); i < concept.getEnd(); i++) {
+                fact += docline.get(i).get(TextAnnotation.class) + " ";
+            }
+            fact += docline.get(concept.getEnd()).get(TextAnnotation.class);
+        }catch (IndexOutOfBoundsException e){
+            
         }
-        fact += docline.get(concept.getEnd()).get(TextAnnotation.class);
         boolean kt = concept.getContent().toLowerCase().equals(fact.toLowerCase());
         if (!kt)
             System.out.println(
@@ -97,6 +101,8 @@ public class EmrTrain {
     
     private void generateDataTraining(List<DocLine> docLines, List<Concept> concepts, List<Relation> relations) throws IOException{
         int totalMiss = 0;
+        List<Double[]> trainingData = new ArrayList<Double[]>();
+        //int start = EmrTrain.trainingData.size();
         long timeStart = System.nanoTime();
         for (int i = 0; i < concepts.size() - 1; i++)
             for (int j = i + 1; j < concepts.size(); j++) {
@@ -143,7 +149,7 @@ public class EmrTrain {
                 aVector[13] = ContextFeature.lemma(preConcept, coreLabelLst);
                 aVector[14] = ContextFeature.lemma(posConcept, coreLabelLst);
                 aVector[DIMENSIONS] = Relation.valueOfType(relations.get(i).getType());
-                EmrTrain.trainingData.add(aVector);
+                trainingData.add(aVector);
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Error: out of bound exception:");
                 System.out.println(relations.get(i).toString());
@@ -165,7 +171,7 @@ public class EmrTrain {
         if (!file.exists()) {
             file.createNewFile();
         }
-        FileWriter fw = new FileWriter(file);
+        FileWriter fw = new FileWriter(file, true);
         BufferedWriter bw = new BufferedWriter(fw);
 
         for (int i = 0; i < trainingData.size(); i++) {
@@ -203,14 +209,19 @@ public class EmrTrain {
     }
     
     public void training(List<DocLine> docLines, List<Concept> concepts, List<Relation> relations) throws IOException {
-        //generateDataTraining(docLines, concepts, relations);
-        readDataTraining(FILE);
-        for (int i = 0; i < EmrTrain.trainingData.size(); i++){
-            for (int j = 0; j <= DIMENSIONS; j++)
-                System.out.print(EmrTrain.trainingData.get(i)[j] + " ");
-            System.out.println("\n");
-        }
+        generateDataTraining(docLines, concepts, relations);
+        //readDataTraining(FILE);
+//        for (int i = 0; i < EmrTrain.trainingData.size(); i++){
+//            for (int j = 0; j <= DIMENSIONS; j++)
+//                System.out.print(EmrTrain.trainingData.get(i)[j] + " ");
+//            System.out.println("\n");
+//        }
         //start training...
+        multiClassifyTraining(trainingData);
+    }
+    
+    public void training() throws IOException{
+        readDataTraining(FILE);
         multiClassifyTraining(trainingData);
     }
 }

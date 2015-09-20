@@ -69,7 +69,7 @@ public class ContextFeature extends Feature {
         // List<CoreLabel> tokens = coreMap.get(TokensAnnotation.class);
         String words = "";
         for (int i = concept.getBegin(); i <= concept.getEnd(); i++) {
-            words += tokens.get(i).getString(LemmaAnnotation.class).toLowerCase();
+            words += tokens.get(i).get(LemmaAnnotation.class).toLowerCase();
         }
         if (ContextFeature.dictionary.get(words) == null) {
             ContextFeature.dictionary.put(words, ContextFeature.autoValue++);
