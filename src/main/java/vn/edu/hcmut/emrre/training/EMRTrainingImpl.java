@@ -9,9 +9,10 @@ public class EMRTrainingImpl implements EMRTranning{
 
     public Model trainOnContext() {
         FeatureExtractor featureExtractor = FeatureExtractorFactory.getInstance(FeatureExtractorType.CONTEXT);
-        featureExtractor.run();
-        double[] vector = featureExtractor.getVector();
-        return SVM;
+        //featureExtractor.run();
+        //double[] vector = featureExtractor.getVector();
+        //return SVM;
+        return null;
     }
 
     public Model trainOnWiki() {

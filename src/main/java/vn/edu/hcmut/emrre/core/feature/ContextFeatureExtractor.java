@@ -10,6 +10,7 @@ import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
 
 public class ContextFeatureExtractor implements FeatureExtractor{
+    public static final int dimension = 15;
     
     private static HashMap<String, Double> dictionary;
 
@@ -85,10 +86,10 @@ public class ContextFeatureExtractor implements FeatureExtractor{
         return 0;
     }
 
-    // Feature[] buildFeature(){
-    // return {FeatureNode(1,distance(words, relation)),
-    // FeatureNode(2,0),
-    // FeatureNode(3,distance(words, relation))
-    // };
-    // }
+    public List<Double> buildFeatures(Relation relation) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+
 }

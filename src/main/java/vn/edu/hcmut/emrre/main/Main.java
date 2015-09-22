@@ -1,6 +1,10 @@
+package vn.edu.hcmut.emrre.main;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+
+import javax.print.attribute.standard.PrinterLocation;
 
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.DocLine;
@@ -10,17 +14,18 @@ import vn.edu.hcmut.emrre.training.EmrTrain;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-    	String inputDocFile = "i2b2data/beth/txt/record-106.txt";
-        String inputConceptFile = "i2b2data/beth/concept/record-106.con";
-        String inputRelationFile = "i2b2data/beth/rel/record-106.rel";
+    	String inputDocFile = "i2b2data/train/beth/txt/record-106.txt";
+        String inputConceptFile = "i2b2data/train/beth/concept/record-106.con";
+        String inputRelationFile = "i2b2data/train/beth/rel/record-106.rel";
         double autoValue = 0;
         HashMap<String, Double> dictionary  = new HashMap<String, Double>();
         DataReader dataReader = new DataReader();
         List<DocLine> docLines = dataReader.readDocument(inputDocFile);
-        List<Concept> concepts = dataReader.readConcepts(inputConceptFile);
+        List<Concept> concepts = dataReader.readConcepts(inputConceptFile, 0);
         List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
-    	EmrTrain train = new EmrTrain();
-        train.training(docLines, concepts, relations);
+        System.out.println("End");
+    	//EmrTrain train = new EmrTrain();
+        //train.training(docLines, concepts, relations);
 //        StanfordParserHelperImpl stant = new StanfordParserHelperImpl();
 //        long start = System.nanoTime();
 //        stant.parseDataFromDocLines(docLines);

@@ -48,7 +48,7 @@ public class DataReader {
         return docLines;
     }
 
-    public List<Concept> readConcepts(String inputFile) {
+    public List<Concept> readConcepts(String inputFile, int keyStart) {
         List<Concept> concepts = new ArrayList<Concept>();
         Matcher matcher = null;
         try {
@@ -56,7 +56,7 @@ public class DataReader {
             InputStreamReader is = new InputStreamReader(classLoader.getResourceAsStream(inputFile));
             BufferedReader br = new BufferedReader(is);
 
-            String fileName = getFileNameFromPath(inputFile);
+            String fileName = getFileNameFromPath(inputFile).split("\\.")[0];
             String lineContent = "";
 
             while ((lineContent = br.readLine()) != null) {
@@ -76,7 +76,7 @@ public class DataReader {
                 }
 
                 Concept concept = new Concept(fileName, conceptContent, lineIndex, begin, end,
-                        Concept.Type.valueOf(type.toUpperCase()), concepts.size());
+                        Concept.Type.valueOf(type.toUpperCase()), keyStart++);
                 // System.err.println(concept);
                 concepts.add(concept);
             }
@@ -97,7 +97,8 @@ public class DataReader {
             InputStreamReader is = new InputStreamReader(classLoader.getResourceAsStream(inputFile));
             BufferedReader br = new BufferedReader(is);
 
-            String fileName = getFileNameFromPath(inputFile);
+            String fileName = getFileNameFromPath(inputFile).split("\\.")[0];
+            
             String lineContent = "";
 
             while ((lineContent = br.readLine()) != null) {
@@ -128,8 +129,8 @@ public class DataReader {
                     relationType = matcher.group(6).trim();
                 }
 
-                Concept concept1 = findConcept(concepts, conceptContent1, lineIndex1, begin1, end1);
-                Concept concept2 = findConcept(concepts, conceptContent2, lineIndex2, begin2, end2);
+                Concept concept1 = findConcept(concepts, conceptContent1, lineIndex1, begin1, end1, fileName);
+                Concept concept2 = findConcept(concepts, conceptContent2, lineIndex2, begin2, end2, fileName);
                 if (concept1 != null && concept2 != null) {
                     Relation relation = new Relation(fileName, concept1.getKey(), concept2.getKey(),
                             Relation.Type.valueOf(relationType), relations.size());
@@ -156,13 +157,14 @@ public class DataReader {
         return fileName;
     }
 
-    private Concept findConcept(List<Concept> concepts, String content, int atLine, int begin, int end) {
+    private Concept findConcept(List<Concept> concepts, String content, int atLine, int begin, int end, String fileName) {
         Concept concept = null;
         Iterator<Concept> iterator = concepts.iterator();
         while (iterator.hasNext()) {
             concept = iterator.next();
+            
             if (concept.getContent().equals(content) && concept.getLine() == atLine && concept.getBegin() == begin
-                    && concept.getEnd() == end) {
+                    && concept.getEnd() == end && concept.getFileName().equals(fileName)) {
                 return concept;
             }
         }
@@ -175,7 +177,7 @@ public class DataReader {
         String inputRelationFile = "i2b2data/beth/rel/record-13.rel";
         DataReader dataReader = new DataReader();
         List<DocLine> docLines = dataReader.readDocument(inputDocFile);
-        List<Concept> concepts = dataReader.readConcepts(inputConceptFile);
+        List<Concept> concepts = dataReader.readConcepts(inputConceptFile, 0);
         List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
 
         String name = concepts.get(0).getFileName().split("\\.")[0];
