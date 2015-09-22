@@ -1,12 +1,14 @@
 package vn.edu.hcmut.emrre.training;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
 import vn.edu.hcmut.emrre.core.feature.FeatureExtractor;
 import vn.edu.hcmut.emrre.core.feature.FeatureExtractorFactory;
-import vn.edu.hcmut.emrre.core.feature.FeatureExtractorType;
+import vn.edu.hcmut.emrre.core.svm.SVM;
 import vn.edu.hcmut.emrre.core.utils.ReadFile;
 
 public class EMRTrain2 {
@@ -60,9 +62,9 @@ public class EMRTrain2 {
     public void setType(int type) {
         this.type = type;
     }
-    
-    public void getConceptData(){
-        if (EMRTrain2.concepts == null){
+
+    public void getConceptData() {
+        if (EMRTrain2.concepts == null) {
             ReadFile read = new ReadFile();
             read.setFolder("i2b2data/train/beth");
             EMRTrain2.concepts = read.getAllConcept(0);
@@ -70,8 +72,9 @@ public class EMRTrain2 {
             EMRTrain2.concepts.addAll(read.getAllConcept(EMRTrain2.concepts.size()));
         }
     }
-    public void getRelationData(){
-        if (EMRTrain2.relations == null && EMRTrain2.concepts != null){
+
+    public void getRelationData() {
+        if (EMRTrain2.relations == null && EMRTrain2.concepts != null) {
             ReadFile read = new ReadFile();
             read.setFolder("i2b2data/train/beth");
             EMRTrain2.relations = read.getAllRelation(concepts, false);
@@ -79,14 +82,16 @@ public class EMRTrain2 {
             EMRTrain2.relations.addAll(read.getAllRelation(concepts, true));
         }
     }
-    
-    public static void main(String[] args) {
-        EMRTrain2 train = new EMRTrain2(1);
-        train.getConceptData();
-        train.getRelationData();
-        System.out.println(EMRTrain2.concepts.size());
-        System.out.println(EMRTrain2.concepts.get(EMRTrain2.concepts.size() -1).getKey());
-        System.out.println(EMRTrain2.relations.size());
+
+    public void run() throws IOException {
+        getConceptData();
+        getRelations();
+        List<double[]> dataTrain = new ArrayList<double[]>();
+        for (Relation relation : relations) {
+            dataTrain.add(featureExtractor.buildFeatures(relation));
+        }
+        SVM svm = new SVM(model, featureExtractor.getDimension(), dataTrain);
+        svm.svmTrainCore(); // --> model file.
     }
 
 }
