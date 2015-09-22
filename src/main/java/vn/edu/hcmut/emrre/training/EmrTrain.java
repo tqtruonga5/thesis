@@ -46,8 +46,8 @@ public class EmrTrain {
         fact += docline.get(concept.getEnd()).get(TextAnnotation.class);
         boolean kt = concept.getContent().toLowerCase().equals(fact.toLowerCase());
         if (!kt)
-            System.out.println(
-                    "Concept:$" + concept.getContent().toLowerCase() + "$ ---- Docline:$" + fact.toLowerCase() + "$");
+            System.out.println("Concept:$" + concept.getContent().toLowerCase() + "$ ---- Docline:$"
+                    + fact.toLowerCase() + "$");
         return kt;
     }
 
@@ -57,20 +57,20 @@ public class EmrTrain {
         String key2 = "key2" + ran.nextInt(100);
         String key3 = "key3" + ran.nextInt(100);
         String key4 = "key4" + ran.nextInt(100);
-        
+
         docline = docline.replaceAll(" \\.", key1);
         docline = docline.replaceAll(" %", key2);
         docline = docline.replaceAll(" # ", key3);
         docline = docline.replaceAll(" - ", key4);
-        
+
         docline = docline.replaceAll("\\.", POINT);
         docline = docline.replaceAll("%", PERCENT);
         docline = docline.replaceAll("#", SHARP);
         docline = docline.replaceAll("-", DASH);
         docline = docline.replaceAll(key1, " \\.");
         docline = docline.replaceAll(key2, " %");
-        docline = docline.replaceAll(key3," # ");
-        docline = docline.replaceAll(key4," - ");
+        docline = docline.replaceAll(key3, " # ");
+        docline = docline.replaceAll(key4, " - ");
         return docline;
     }
 
@@ -79,7 +79,7 @@ public class EmrTrain {
         docline = docline.replaceAll(PERCENT, "%");
         docline = docline.replaceAll(SHARP, "#");
         docline = docline.replaceAll(DASH, "-");
-        
+
         return docline;
     }
 
@@ -90,12 +90,13 @@ public class EmrTrain {
         return coreLabelLst;
     }
 
-    private void multiClassifyTraining(List<Double[]> trainingData) throws IOException{
+    private void multiClassifyTraining(List<Double[]> trainingData) throws IOException {
         SVM svm = new SVM();
         svm.svmTrainCore(trainingData, trainingData.size(), DIMENSIONS);
     }
-    
-    private void generateDataTraining(List<DocLine> docLines, List<Concept> concepts, List<Relation> relations) throws IOException{
+
+    private void generateDataTraining(List<DocLine> docLines, List<Concept> concepts, List<Relation> relations)
+            throws IOException {
         int totalMiss = 0;
         long timeStart = System.nanoTime();
         for (int i = 0; i < concepts.size() - 1; i++)
@@ -110,7 +111,7 @@ public class EmrTrain {
             }
         for (int i = 0; i < relations.size(); i++) {
             System.out.println("Relation " + i);
-            Double[] aVector = new Double[DIMENSIONS+1];
+            Double[] aVector = new Double[DIMENSIONS + 1];
             Concept preConcept = Concept.getConcept(relations.get(i).getPreConcept(), concepts);
             Concept posConcept = Concept.getConcept(relations.get(i).getPosConcept(), concepts);
             DocLine docline = DocLine.getDocLine(docLines, preConcept.getLine());
@@ -177,40 +178,40 @@ public class EmrTrain {
         bw.close();
         fw.close();
     }
-    
-    private Double[] parse2Double(String line){
+
+    private Double[] parse2Double(String line) {
         Double[] result = new Double[DIMENSIONS + 1];
         String[] lst = line.split("[ ]+");
         int index = 0;
-        for (int i = 0; i < lst.length; i++){
-            if (!(lst[i].trim().equals("|"))){
+        for (int i = 0; i < lst.length; i++) {
+            if (!(lst[i].trim().equals("|"))) {
                 result[index++] = Double.parseDouble(lst[i].trim());
             }
         }
         return result;
     }
-    
-    public void readDataTraining(String fileName) throws IOException{
+
+    public void readDataTraining(String fileName) throws IOException {
         File file = new File(fileName);
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         String line;
-        while((line = br.readLine()) != null){
+        while ((line = br.readLine()) != null) {
             EmrTrain.trainingData.add(parse2Double(line));
         }
         br.close();
         fr.close();
     }
-    
+
     public void training(List<DocLine> docLines, List<Concept> concepts, List<Relation> relations) throws IOException {
-        //generateDataTraining(docLines, concepts, relations);
+        // generateDataTraining(docLines, concepts, relations);
         readDataTraining(FILE);
-        for (int i = 0; i < EmrTrain.trainingData.size(); i++){
+        for (int i = 0; i < EmrTrain.trainingData.size(); i++) {
             for (int j = 0; j <= DIMENSIONS; j++)
                 System.out.print(EmrTrain.trainingData.get(i)[j] + " ");
             System.out.println("\n");
         }
-        //start training...
+        // start training...
         multiClassifyTraining(trainingData);
     }
 }
