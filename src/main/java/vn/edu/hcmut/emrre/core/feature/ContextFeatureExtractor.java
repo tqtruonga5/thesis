@@ -9,13 +9,26 @@ import vn.edu.hcmut.emrre.core.entity.word.Word;
 import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
 
-public class ContextFeatureExtractor implements FeatureExtractor{
+public class ContextFeatureExtractor implements FeatureExtractor {
     
+    private List<Concept> concepts;
+    private List<Relation> relations;
+    
+    public void setDataSource(List<Concept> concepts, List<Relation> relations) {
+        this.concepts = concepts;
+        this.relations = relations;
+    }
+
+    public List<Double> buildFeatures() {
+        return null;
+    }
+
     private static HashMap<String, Double> dictionary;
 
     private static double autoValue;
 
     public ContextFeatureExtractor() {
+
     }
 
     static {
@@ -84,11 +97,4 @@ public class ContextFeatureExtractor implements FeatureExtractor{
     double bigram(List<Word> words, Relation relation) {
         return 0;
     }
-
-    // Feature[] buildFeature(){
-    // return {FeatureNode(1,distance(words, relation)),
-    // FeatureNode(2,0),
-    // FeatureNode(3,distance(words, relation))
-    // };
-    // }
 }

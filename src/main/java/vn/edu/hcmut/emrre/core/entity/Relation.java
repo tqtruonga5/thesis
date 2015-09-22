@@ -95,23 +95,6 @@ public class Relation {
         return (first.getType() == Concept.Type.PROBLEM || second.getType() == Concept.Type.PROBLEM)
                 & first.getLine() == second.getLine();
     }
-<<<<<<< .mine
-                    check = true;
-                    break;
-                }
-            }
-        }
-        return check;
-    }
-=======
-
-
-
-
-
-
-
->>>>>>> .theirs
 
     public static boolean inASentences(int begin1, int begin2, String line) {
         boolean check = false;
@@ -156,8 +139,8 @@ public class Relation {
             return 0;
         }
     }
-    
-    public static Relation.Type typeOfDouble(int value){
+
+    public static Relation.Type typeOfDouble(int value) {
         switch (value) {
         case 1:
             return Type.TrIP;
@@ -183,59 +166,11 @@ public class Relation {
     @Override
     public String toString() {
         return String.format("%s | %s |%s", preConcept, type, posConcept);
-    };
-<<<<<<< .mine
-        case TrAP:
-            return 2;
-        case TrNAP:
-            return 3;
-        case TrCP:
-            return 4;
-        case TrWP:
-            return 5;
-        case TeRP:
-            return 6;
-        case TeCP:
-            return 7;
-        case NONE:
-            return 8;
-        default:
-            return 0;
-        }
     }
-=======
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> .theirs
-
-    // public static void main(String[] args) {
-    // System.out.println(Type.valueOf("TrIP"));
-    // }
-<<<<<<< .mine
-
-    // public static void main(String[] args) {
-    // System.out.println(Type.valueOf("TrIP"));
-    // }
-=======
-
-
-
-
->>>>>>> .theirs
+    public String toString(List<Concept> concepts) {
+        return String.format("%s - %s - %d | %s |%s- %s - %d", preConcept, concepts.get(preConcept).getType(), concepts
+                .get(preConcept).getLine(), type, posConcept,concepts.get(posConcept).getType(), concepts
+                .get(posConcept).getLine());
+    }
 }

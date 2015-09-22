@@ -9,7 +9,6 @@ public class App {
         SentenceDAO sentenceDAO = new SentenceDAOImpl();
         Sentence sentence = sentenceDAO.findByRecordAndLineIndex("record-13", 12);
         System.err.println(sentence);
-        
         System.out.println(sentence.getWords());
 
     }

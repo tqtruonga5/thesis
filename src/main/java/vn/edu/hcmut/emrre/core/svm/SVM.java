@@ -63,6 +63,8 @@ public class SVM {
         svm.l = numberRecords;
         svm.n = dimension;
         
+//        FeatureNode f = new FeatureNode("abc", "ababa");
+        
         Feature[][] feature = new FeatureNode[svm.l][];
         double[] label = new double[svm.l];
         
