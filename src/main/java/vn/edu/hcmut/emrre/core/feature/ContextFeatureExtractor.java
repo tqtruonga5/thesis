@@ -35,9 +35,7 @@ public class ContextFeatureExtractor implements FeatureExtractor{
         // List<CoreLabel> tokens = coreMap.get(TokensAnnotation.class);
         for (int i = 3; i >= 1; i--) {
             if (conceptPosition - i >= 0) {
-
                 String word = tokens.get(conceptPosition - i).get(LemmaAnnotation.class).toLowerCase();
-
                 if (ContextFeatureExtractor.dictionary.get(word) == null) {
                     ContextFeatureExtractor.dictionary.put(word, ContextFeatureExtractor.autoValue++);
                 }
