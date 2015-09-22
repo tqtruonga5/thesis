@@ -1,11 +1,11 @@
 package vn.edu.hcmut.emrre.core.entity.record;
 
+
 import java.util.List;
 
 import org.hibernate.Session;
 
-import vn.edu.hcmut.emrre.core.entity.HibernateUtil;
-
+import vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil;
 public class RecordDAOImpl implements RecordDAO {
     
     public void save(Record record) {

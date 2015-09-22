@@ -92,7 +92,7 @@ public class Concept {
     @Override
     public String toString() {
         return String.format(
-                "c=%s -lineIndex =%d - begin=%d - end=%d - type=%s - key=%d - number of relate followed=%d", content,
+                "file name=%s - c=%s -lineIndex =%d - begin=%d - end=%d - type=%s - key=%d - number of relate followed=%d", fileName, content,
                 line, begin, end, type, key, this.relateLst.size());
     }
 

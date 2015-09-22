@@ -78,12 +78,16 @@ public class Relation {
     public static boolean hasRelation(Concept first, Concept second) {
         // TODO Auto-generated method stub
         boolean check = false;
-        // if (docLine != null & first.getLine() == second.getLine() &
-        // inASentences(first.getBegin(), second.getBegin(),
-        // docLine.getContent())){
         List<Integer> relateLst1 = first.getRelateLst();
         for (int i = 0; i < relateLst1.size(); i++) {
             if (relateLst1.get(i) == second.getKey()) {
+                check = true;
+                break;
+            }
+        }
+        List<Integer> relateLst2 = second.getRelateLst();
+        for (int i = 0; i < relateLst2.size(); i++) {
+            if (relateLst2.get(i) == first.getKey()) {
                 check = true;
                 break;
             }
@@ -93,25 +97,9 @@ public class Relation {
 
     public static boolean canRelate(Concept first, Concept second) {
         return (first.getType() == Concept.Type.PROBLEM || second.getType() == Concept.Type.PROBLEM)
-                & first.getLine() == second.getLine();
+                & first.getLine() == second.getLine()
+                & first.getFileName() == second.getFileName();
     }
-<<<<<<< .mine
-                    check = true;
-                    break;
-                }
-            }
-        }
-        return check;
-    }
-=======
-
-
-
-
-
-
-
->>>>>>> .theirs
 
     public static boolean inASentences(int begin1, int begin2, String line) {
         boolean check = false;
@@ -184,58 +172,4 @@ public class Relation {
     public String toString() {
         return String.format("%s | %s |%s", preConcept, type, posConcept);
     };
-<<<<<<< .mine
-        case TrAP:
-            return 2;
-        case TrNAP:
-            return 3;
-        case TrCP:
-            return 4;
-        case TrWP:
-            return 5;
-        case TeRP:
-            return 6;
-        case TeCP:
-            return 7;
-        case NONE:
-            return 8;
-        default:
-            return 0;
-        }
-    }
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> .theirs
-
-    // public static void main(String[] args) {
-    // System.out.println(Type.valueOf("TrIP"));
-    // }
-<<<<<<< .mine
-
-    // public static void main(String[] args) {
-    // System.out.println(Type.valueOf("TrIP"));
-    // }
-=======
-
-
-
-
->>>>>>> .theirs
 }
