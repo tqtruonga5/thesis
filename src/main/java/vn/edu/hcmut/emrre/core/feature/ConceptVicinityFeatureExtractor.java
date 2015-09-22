@@ -12,9 +12,7 @@ public class ConceptVicinityFeatureExtractor implements FeatureExtractor {
     }
 
     public void setDataSource(List<Concept> concepts, List<Relation> relations) {
-        // TODO Auto-generated method stub
         
     }
 
-    
 }
