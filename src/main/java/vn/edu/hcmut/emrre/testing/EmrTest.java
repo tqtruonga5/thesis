@@ -84,8 +84,8 @@ public class EmrTest {
             for (int i = 0; i < concepts.size() - 1; i++)
                 for (int j = i + 1; j < concepts.size(); j++) {
                     if (Relation.canRelate(concepts.get(i), concepts.get(j))) {
-                        EmrTest.candidateRelations.add(new Relation(concepts.get(i).getFileName(), concepts.get(i)
-                                .getKey(), concepts.get(j).getKey(), null, EmrTest.candidateRelations.size()));
+                        EmrTest.candidateRelations.add(new Relation(concepts.get(i).getFileName(), concepts.get(i),
+                                concepts.get(j), null, EmrTest.candidateRelations.size()));
 
                     }
                 }
@@ -103,9 +103,9 @@ public class EmrTest {
             relation.setType(Relation.typeOfDouble((int) label));
         }
     }
-    
-    public void saveTestResult(){
-        //luu theo dinh dang I2B2
+
+    public void saveTestResult() {
+        // luu theo dinh dang I2B2
     }
 
 }

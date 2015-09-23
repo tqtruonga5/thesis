@@ -37,7 +37,7 @@ public class ReadFile {
                 for (int j = i + 1; j < concepts.size(); j++) {
                     if (Relation.canRelate(concepts.get(i), concepts.get(j))){
                         if (!Relation.hasRelation(concepts.get(i), concepts.get(j))) {
-                            relations.add(new Relation(concepts.get(i).getFileName(), concepts.get(i).getKey(), concepts.get(j).getKey(),
+                            relations.add(new Relation(concepts.get(i).getFileName(), concepts.get(i), concepts.get(j),
                                     Relation.Type.NONE, relations.size()));
                         }
                     }
@@ -45,8 +45,8 @@ public class ReadFile {
         }
         for (int i = 0; i < relations.size() - 1; i++)
         {
-                Concept first = concepts.get(relations.get(i).getPreConcept());
-                Concept second = concepts.get(relations.get(i).getPosConcept());
+                Concept first = relations.get(i).getPreConcept();
+                Concept second = relations.get(i).getPosConcept();
                 if (!Relation.canRelate(first, second)){
                     relations.remove(i);
                 }

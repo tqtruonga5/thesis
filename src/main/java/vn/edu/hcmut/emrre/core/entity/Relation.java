@@ -11,23 +11,18 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class Relation {
     private String fileName;
-    private int preConcept;
-    private int posConcept;
+    // private int preConcept;
+    // private int posConcept;
     private Type type;
     private int key;
+    private Concept preConcept;
+    private Concept posConcept;
 
-    public Relation(String fileName, int preConcept, int posConcept, Type type, int key) {
+    public Relation(String fileName, Concept preConcept, Concept posConcept, Type type, int key) {
         this.preConcept = preConcept;
         this.posConcept = posConcept;
         this.type = type;
         this.fileName = fileName;
-        this.key = key;
-    }
-
-    public Relation(int preConcept, int posConcept, Type type, int key) {
-        this.preConcept = preConcept;
-        this.posConcept = posConcept;
-        this.type = type;
         this.key = key;
     }
 
@@ -41,22 +36,6 @@ public class Relation {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
-    }
-
-    public int getPreConcept() {
-        return preConcept;
-    }
-
-    public void setPreConcept(int preConcept) {
-        this.preConcept = preConcept;
-    }
-
-    public int getPosConcept() {
-        return posConcept;
-    }
-
-    public void setPosConcept(int posConcept) {
-        this.posConcept = posConcept;
     }
 
     public Type getType() {
@@ -97,8 +76,7 @@ public class Relation {
 
     public static boolean canRelate(Concept first, Concept second) {
         return (first.getType() == Concept.Type.PROBLEM || second.getType() == Concept.Type.PROBLEM)
-                & first.getLine() == second.getLine()
-                & first.getFileName() == second.getFileName();
+                & first.getLine() == second.getLine() & first.getFileName() == second.getFileName();
     }
 
     public static boolean inASentences(int begin1, int begin2, String line) {
@@ -120,6 +98,26 @@ public class Relation {
             }
         }
         return check;
+    }
+
+    public Concept getPreConcept() {
+        return preConcept;
+    }
+
+    public void setPreConcept(Concept preConcept) {
+        this.preConcept = preConcept;
+    }
+
+    public Concept getPosConcept() {
+        return posConcept;
+    }
+
+    public void setPosConcept(Concept posConcept) {
+        this.posConcept = posConcept;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
     }
 
     public static double valueOfType(Type type) {
@@ -144,8 +142,8 @@ public class Relation {
             return 0;
         }
     }
-    
-    public static Relation.Type typeOfDouble(int value){
+
+    public static Relation.Type typeOfDouble(int value) {
         switch (value) {
         case 1:
             return Type.TrIP;
