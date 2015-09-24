@@ -1,0 +1,390 @@
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:07 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:23)
+2015-09-23 19:15:21 ERROR App:24 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+2015-09-23 19:15:35 ERROR App:24 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+2015-09-23 19:15:55 ERROR App:25 - 
+java.lang.NullPointerException
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+2015-09-23 19:16:43 ERROR App:29 - Index: 5, Size: 2
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 2
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:26)
+1    [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 5, Size: 2
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 2
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:26)
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+7    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+9    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+11   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+208  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+391  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+395  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+395  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+395  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr_test]
+396  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+741  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+751  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+761  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+765  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+802  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1159 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1159 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1161 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1193 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr_test.record
+1193 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1193 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1193 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1213 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr_test.sentence
+1213 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1213 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1213 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1232 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr_test.word
+1232 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1233 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1233 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1234 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+7    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+8    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+9    [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+210  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+453  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+457  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+458  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+458  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr_test]
+458  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+785  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+794  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+804  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+809  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+842  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1229 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1318 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr_test.record
+1319 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1319 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1319 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1332 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr_test.sentence
+1333 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1333 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1333 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1370 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr_test.word
+1370 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1371 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1371 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1371 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+236889 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+238997 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+1681275 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+2667919 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+3453093 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+3461137 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+7060340 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+9152582 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+10664291 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+10664845 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+10680343 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+10680576 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+10729470 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+10730913 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+11078154 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+13440826 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+13696016 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+13696161 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+13696349 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+13699059 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+13699190 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+13699356 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+15167216 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+16274095 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+16274264 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+16274397 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+16314134 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+17518879 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+17723792 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+18848465 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+19043998 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+22309739 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+22343433 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+22389095 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+22412294 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+23539465 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+23560773 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+23899903 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+23907663 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+23963143 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+23980394 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+24144093 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+24174979 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+24774342 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+24944420 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+24945607 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+24946006 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+25136098 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+25144482 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+26162812 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+26566584 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+26638641 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+26640893 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+26652320 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+26724175 [main] ERROR vn.edu.hcmut.emrre.core.entity.record.App  - Index: 0, Size: 0
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)

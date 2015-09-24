@@ -98,7 +98,7 @@ public class DataReader {
             BufferedReader br = new BufferedReader(is);
 
             String fileName = getFileNameFromPath(inputFile).split("\\.")[0];
-            
+
             String lineContent = "";
 
             while ((lineContent = br.readLine()) != null) {
@@ -132,8 +132,8 @@ public class DataReader {
                 Concept concept1 = findConcept(concepts, conceptContent1, lineIndex1, begin1, end1, fileName);
                 Concept concept2 = findConcept(concepts, conceptContent2, lineIndex2, begin2, end2, fileName);
                 if (concept1 != null && concept2 != null) {
-                    Relation relation = new Relation(fileName, concept1.getKey(), concept2.getKey(),
-                            Relation.Type.valueOf(relationType), relations.size());
+                    Relation relation = new Relation(fileName, concept1, concept2, Relation.Type.valueOf(relationType),
+                            relations.size());
                     // System.out.println(relation);
                     relations.add(relation);
                     // add each concept key to the relateLst of other
@@ -162,7 +162,7 @@ public class DataReader {
         Iterator<Concept> iterator = concepts.iterator();
         while (iterator.hasNext()) {
             concept = iterator.next();
-            
+
             if (concept.getContent().equals(content) && concept.getLine() == atLine && concept.getBegin() == begin
                     && concept.getEnd() == end && concept.getFileName().equals(fileName)) {
                 return concept;

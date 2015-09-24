@@ -28,13 +28,15 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
     }
 
     private void trimWords(List<Word> words, Concept concept) {
-        System.out.println(concept.getType().name());
         for (Word word : words) {
             if (word.getIndex() == concept.getBegin()) {
                 word.setLemma("[" + concept.getType().name() + "]");
+                word.setPosTag("[" + concept.getType().name() + "]");
+                // word.setContent("[" + concept.getType().name() + "]");
             }
             if (word.getIndex() > concept.getBegin() && word.getIndex() <= concept.getEnd()) {
                 word.setLemma(null);
+                word.setPosTag(null);
             }
         }
     }
@@ -42,31 +44,34 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
     public String[] posSequence(Relation relation) {
         List<String> result = new ArrayList<String>();
         String recordName = relation.getFileName();
-        int lineIndex = Concept.getConcept(relation.getPosConcept(), concepts).getLine();
+        int lineIndex = relation.getPosConcept().getLine();
         Sentence curSentence = sentenceDAO.findByRecordAndLineIndex(recordName, lineIndex);
-        Concept pre = Concept.getConcept(relation.getPreConcept(), concepts);
-        Concept pos = Concept.getConcept(relation.getPosConcept(), concepts);
-        
+        Concept pre = relation.getPreConcept();
+        Concept pos = relation.getPosConcept();
+
         List<Word> words = curSentence.getWords();
         trimWords(words, pre);
         trimWords(words, pos);
         for (Word word : words) {
-            if (word.getContent() != null) {
+            if (word.getPosTag() != null) {
                 result.add(word.getPosTag());
             }
         }
-
+        System.out.println(curSentence.getContent());
+        System.out.println(relation.getPreConcept().getContent());
+        System.out.println(relation.getPosConcept().getContent());
         return result.stream().toArray(String[]::new);
     }
 
     public String[] lemmaSequence(Relation relation) {
         List<String> result = new ArrayList<String>();
         String recordName = relation.getFileName();
-        int lineIndex = Concept.getConcept(relation.getPosConcept(), concepts).getLine();
+        int lineIndex = relation.getPosConcept().getLine();
         Sentence curSentence = sentenceDAO.findByRecordAndLineIndex(recordName, lineIndex);
+
         List<Word> words = curSentence.getWords();
-        Concept pre = Concept.getConcept(relation.getPreConcept(), concepts);
-        Concept pos = Concept.getConcept(relation.getPosConcept(), concepts);
+        Concept pre = relation.getPreConcept();
+        Concept pos = relation.getPosConcept();
 
         int begin = (pre.getBegin() < pos.getBegin()) ? pre.getBegin() : pos.getBegin();
         int end = (pre.getEnd() > pos.getEnd()) ? pre.getEnd() : pos.getEnd();
@@ -81,10 +86,6 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
                 result.add(words.get(i).getLemma());
             }
         }
-        System.out.println("=========");
-        System.out.println(curSentence.getContent());
-        System.out.println(pre);
-        System.out.println(pos);
 
         return result.stream().toArray(String[]::new);
     }
@@ -149,11 +150,22 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
 
         SimilarityFeaturesExtractor sf = new SimilarityFeaturesExtractor(concepts);
 
-        String[] posTags = sf.lemmaSequence(relations.get(10));
-
-        for (String string : posTags) {
-            System.err.print(string + " ");
+        for (Relation relation : relations) {
+            String[] posTags = sf.posSequence(relation);
+            for (String string : posTags) {
+                System.err.print(string + " ");
+            }
+            System.out.println();
+            posTags = sf.lemmaSequence(relation);
+            for (String string : posTags) {
+                System.err.print(string + " ");
+            }
+            System.out.println("=====\n");
         }
+
+        // for (String string : posTags) {
+        // System.err.print(string + " ");
+        // }
 
     }
 }

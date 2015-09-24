@@ -88,8 +88,15 @@
             <version>1.0.0.GA</version>
             <scope>provided</scope>
         </dependency>
-
         <!-- END: Hibernate -->
+
+        <!-- Log4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.12</version>
+        </dependency>
+        <!-- Log4J -->
 
     </dependencies>
 
