@@ -11,16 +11,19 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class Relation {
     private String fileName;
-    // private int preConcept;
-    // private int posConcept;
     private Type type;
     private int key;
     private Concept preConcept;
     private Concept posConcept;
 
     public Relation(String fileName, Concept preConcept, Concept posConcept, Type type, int key) {
-        this.preConcept = preConcept;
-        this.posConcept = posConcept;
+        if (preConcept.getBegin() < posConcept.getBegin()) {
+            this.preConcept = preConcept;
+            this.posConcept = posConcept;
+        } else {
+            this.preConcept = posConcept;
+            this.posConcept = preConcept;
+        }
         this.type = type;
         this.fileName = fileName;
         this.key = key;

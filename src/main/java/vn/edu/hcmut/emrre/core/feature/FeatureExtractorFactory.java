@@ -1,5 +1,7 @@
 package vn.edu.hcmut.emrre.core.feature;
 
+import vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor;
+
 public class FeatureExtractorFactory {
 
     public static FeatureExtractor getInstance(int type) {

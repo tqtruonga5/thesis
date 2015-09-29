@@ -388,3 +388,950 @@ java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at java.util.ArrayList.rangeCheck(Unknown Source)
 	at java.util.ArrayList.get(Unknown Source)
 	at vn.edu.hcmut.emrre.core.entity.record.App.main(App.java:22)
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+57   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+57   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+57   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+151  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+167  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+471  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+814  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+835  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+835  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+835  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr_test]
+835  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+3226 [main] WARN  org.hibernate.engine.jdbc.internal.JdbcServicesImpl  - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+3251 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+3251 [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000422: Disabling contextual LOB creation as connection was null
+3283 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+3283 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+3408 [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+3939 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+3955 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+5967 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2209)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:173)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:457)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1737)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1775)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.buildSessionFactory(HibernateUtil.java:13)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.<clinit>(HibernateUtil.java:8)
+	at vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAOImpl.findByRecordAndLineIndex(SentenceDAOImpl.java:32)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.getSenContainRelation(SimilarityFeaturesExtractor.java:184)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.shortestPath(SimilarityFeaturesExtractor.java:110)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.main(SimilarityFeaturesExtractor.java:199)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2132)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 25 more
+5970 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2209)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:173)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:457)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1737)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1775)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.buildSessionFactory(HibernateUtil.java:13)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.<clinit>(HibernateUtil.java:8)
+	at vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAOImpl.findByRecordAndLineIndex(SentenceDAOImpl.java:32)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.getSenContainRelation(SimilarityFeaturesExtractor.java:184)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.shortestPath(SimilarityFeaturesExtractor.java:110)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.main(SimilarityFeaturesExtractor.java:199)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2132)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 25 more
+8340 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 0, SQLState: 08S01
+8340 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+187  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+367  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+368  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+368  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+368  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr_test]
+368  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2534 [main] WARN  org.hibernate.engine.jdbc.internal.JdbcServicesImpl  - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2547 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2547 [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000422: Disabling contextual LOB creation as connection was null
+2562 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2562 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2593 [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+2862 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+2862 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+6718 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'emr_test'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1030)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3558)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3490)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3996)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:173)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:457)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1737)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1775)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.buildSessionFactory(HibernateUtil.java:13)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.<clinit>(HibernateUtil.java:8)
+	at vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAOImpl.findByRecordAndLineIndex(SentenceDAOImpl.java:32)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.getSenContainRelation(SimilarityFeaturesExtractor.java:184)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.shortestPath(SimilarityFeaturesExtractor.java:110)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.main(SimilarityFeaturesExtractor.java:199)
+6718 [main] ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'emr_test'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1030)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3558)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3490)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3996)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:173)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:457)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1737)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1775)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.buildSessionFactory(HibernateUtil.java:13)
+	at vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil.<clinit>(HibernateUtil.java:8)
+	at vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAOImpl.findByRecordAndLineIndex(SentenceDAOImpl.java:32)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.getSenContainRelation(SimilarityFeaturesExtractor.java:184)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.shortestPath(SimilarityFeaturesExtractor.java:110)
+	at vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor.main(SimilarityFeaturesExtractor.java:199)
+6904 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1049, SQLState: 42000
+6904 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unknown database 'emr_test'
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+0    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+204  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+891  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+899  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+899  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+914  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+946  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1321 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1321 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1321 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1321 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1399 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1399 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1399 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1399 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1477 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1477 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1477 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1477 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1477 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+16   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+55   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+55   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+197  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+369  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+369  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+369  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+369  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+369  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+837  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+842  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+857  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+857  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+904  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1195 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1195 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1195 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1227 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1242 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+16   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+172  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+344  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+359  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+359  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+359  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+359  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+656  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+667  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+682  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+682  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+714  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+995  [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+995  [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+995  [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1057 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1057 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1057 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1057 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1073 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1089 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+16   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+203  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+391  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+797  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+799  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+799  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+814  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+846  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1139 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1139 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1139 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1155 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1155 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1155 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1155 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1170 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1170 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1170 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1170 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1186 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+0    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+273  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+445  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+445  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+445  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+445  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+445  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+757  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+765  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+765  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+781  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+812  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1093 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1093 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1093 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1109 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1109 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1109 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1109 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+218  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+422  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+715  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+734  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+734  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+750  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+781  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1062 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1062 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1062 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1078 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1078 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1078 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1078 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1093 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1093 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1093 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1093 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1140 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+218  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+404  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+404  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+404  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+404  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+404  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+717  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+720  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+720  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+735  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+766  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1035 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1035 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1035 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1066 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1066 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1066 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1066 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1082 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1082 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1082 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1082 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1098 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1098 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1098 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1098 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1098 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+7    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+9    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+11   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+35   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+36   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+199  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+392  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+396  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+396  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+396  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+397  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+760  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+768  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+783  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+792  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+830  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1146 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1146 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1148 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1174 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1174 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1175 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1175 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1190 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1190 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1190 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1190 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1203 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1203 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1203 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1203 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1204 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+7    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+9    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+11   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+30   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+30   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+172  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+381  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+384  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+385  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+385  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+385  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+744  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+754  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+765  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+770  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+817  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1189 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1189 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1191 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1212 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1212 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1212 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1212 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1224 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1224 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1224 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1224 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1237 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1237 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1237 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1237 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1238 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+0    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+0    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+0    [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+178  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+354  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+357  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+357  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+357  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+358  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+669  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+677  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+686  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+686  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+728  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1014 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1014 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1017 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1038 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1039 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1039 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1039 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1053 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1054 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1054 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1054 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1065 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1065 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1065 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1065 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1066 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+7    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+8    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+10   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+29   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+29   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+208  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+379  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+384  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+384  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+384  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+384  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+691  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+704  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+714  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+717  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+754  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1031 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1032 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1034 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1056 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1056 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1056 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1056 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1067 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1067 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1067 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1067 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1077 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1078 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1078 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1078 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1079 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+7    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+8    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+10   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+28   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+30   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+287  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+463  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+463  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+463  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+463  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+463  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+787  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+802  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+816  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+822  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+862  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1156 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1157 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1158 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1181 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1205 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1205 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1205 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1205 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1206 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+6    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+7    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+9    [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+30   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+175  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+466  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+471  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+471  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+471  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+472  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+805  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+813  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+821  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+825  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+861  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1147 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1148 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1149 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1168 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1193 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1194 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1194 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1194 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1195 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+187  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+343  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+343  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+343  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+343  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+343  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+734  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+737  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+753  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+753  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+800  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1081 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1081 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1081 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1112 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1112 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1112 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1112 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1128 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+101  [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+117  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+117  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+226  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+226  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+733  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+1255 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+1282 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+1282 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+1282 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+1282 [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2142 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2142 [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2158 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2173 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2283 [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+2982 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+2982 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+2998 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+3186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+3186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+3186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+3186 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+3221 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+3221 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+3221 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+3221 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+3271 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+3271 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+3271 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+3271 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+3271 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+234  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+406  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+734  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+746  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+761  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+761  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+793  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1074 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1074 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1074 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1089 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1089 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1089 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1089 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1105 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1105 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1105 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1105 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1121 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1121 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1121 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1121 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1121 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+0    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+0    [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+31   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+203  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+391  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+391  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+391  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+391  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+391  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+703  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+716  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+732  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+732  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+779  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1060 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1060 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1075 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1091 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1091 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1091 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1091 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1107 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1107 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1107 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1107 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1122 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1122 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1122 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1122 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1122 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+16   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+47   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+47   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+235  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+423  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+439  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+439  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+439  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+439  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+751  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+756  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+772  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+772  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+803  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1094 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1094 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1094 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1125 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1157 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1157 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1157 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+8    [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+12   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+12   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+32   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+204  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+432  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+436  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+436  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+436  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+436  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+796  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+808  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+816  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+824  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+860  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1176 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1176 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1180 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1204 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1204 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1204 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1204 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1220 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1220 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1220 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1220 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1240 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1240 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1240 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1240 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1240 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+16   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+16   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+32   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+47   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+47   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+203  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+377  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+377  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+377  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+377  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+377  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+877  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+882  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+898  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+898  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+945  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1304 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1304 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1304 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1320 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1320 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1320 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1320 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1335 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1335 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1335 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1335 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1351 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1351 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1351 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1351 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1351 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
+0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+15   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.0.1.Final}
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+15   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+47   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+47   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+235  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+438  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+454  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20
+454  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+454  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/emr]
+454  [main] INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+766  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+783  [main] INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder  - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+783  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+799  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+830  [main] INFO  org.hibernate.validator.util.Version  - Hibernate Validator 4.2.0.Final
+1111 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000228: Running hbm2ddl schema update
+1111 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000102: Fetching database metadata
+1111 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000396: Updating schema
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.record
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [name, id, text]
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: []
+1141 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary]
+1156 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.sentence
+1156 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [recordid, record_id, is_handle, includepattern, ishandle, index, id, content, include_pattern]
+1156 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_sentence_1]
+1156 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [primary, fk_sentence_1_idx]
+1172 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000261: Table found: emr.word
+1172 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000037: Columns: [other_tag, ibo_tag, orth_tag, sentence_id, umls_tag, lemma, pos_tag, sessiontag, id, position, content]
+1172 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000108: Foreign keys: [fk_word_1]
+1172 [main] INFO  org.hibernate.tool.hbm2ddl.TableMetadata  - HHH000126: Indexes: [fk_word_1_idx, primary]
+1172 [main] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate  - HHH000232: Schema update complete
