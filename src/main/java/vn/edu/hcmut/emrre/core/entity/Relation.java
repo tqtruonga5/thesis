@@ -11,20 +11,26 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class Relation {
     private String fileName;
-    private int preConcept;
-    private int posConcept;
+    private Concept preConcept;
+    private Concept posConcept;
     private Type type;
     private int key;
 
-    public Relation(String fileName, int preConcept, int posConcept, Type type, int key) {
-        this.preConcept = preConcept;
-        this.posConcept = posConcept;
+    public Relation(String fileName, Concept preConcept, Concept posConcept, Type type, int key) {
+        if (preConcept.getBegin() <  posConcept.getBegin()){
+            this.preConcept = preConcept;
+            this.posConcept = posConcept;
+        }
+        else{
+            this.preConcept = posConcept;
+            this.posConcept = preConcept;
+        }
         this.type = type;
         this.fileName = fileName;
         this.key = key;
     }
 
-    public Relation(int preConcept, int posConcept, Type type, int key) {
+    public Relation(Concept preConcept, Concept posConcept, Type type, int key) {
         this.preConcept = preConcept;
         this.posConcept = posConcept;
         this.type = type;
@@ -43,19 +49,19 @@ public class Relation {
         this.fileName = fileName;
     }
 
-    public int getPreConcept() {
+    public Concept getPreConcept() {
         return preConcept;
     }
 
-    public void setPreConcept(int preConcept) {
+    public void setPreConcept(Concept preConcept) {
         this.preConcept = preConcept;
     }
 
-    public int getPosConcept() {
+    public Concept getPosConcept() {
         return posConcept;
     }
 
-    public void setPosConcept(int posConcept) {
+    public void setPosConcept(Concept posConcept) {
         this.posConcept = posConcept;
     }
 
@@ -78,16 +84,16 @@ public class Relation {
     public static boolean hasRelation(Concept first, Concept second) {
         // TODO Auto-generated method stub
         boolean check = false;
-        List<Integer> relateLst1 = first.getRelateLst();
+        List<Concept> relateLst1 = first.getRelateLst();
         for (int i = 0; i < relateLst1.size(); i++) {
-            if (relateLst1.get(i) == second.getKey()) {
+            if (relateLst1.get(i).getKey() == second.getKey()) {
                 check = true;
                 break;
             }
         }
-        List<Integer> relateLst2 = second.getRelateLst();
+        List<Concept> relateLst2 = second.getRelateLst();
         for (int i = 0; i < relateLst2.size(); i++) {
-            if (relateLst2.get(i) == first.getKey()) {
+            if (relateLst2.get(i).getKey() == first.getKey()) {
                 check = true;
                 break;
             }

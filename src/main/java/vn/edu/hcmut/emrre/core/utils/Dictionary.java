@@ -8,16 +8,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-import vn.edu.hcmut.emrre.training.EmrTrain;
-
 public class Dictionary {
 
     private static final String fileDictionary = "dictionary.txt";
-    public HashMap<String, Double> dictionary;
-    private double autoValue;
+    private HashMap<String, Integer> dictionary;
+    private int autoValue;
     
     public Dictionary(){
-        this.dictionary = new HashMap<String, Double>();
+        this.dictionary = new HashMap<String, Integer>();
         this.autoValue = 0;
     }
     
@@ -27,6 +25,14 @@ public class Dictionary {
         }
     }
     
+    public int getValue(String word){
+        return (this.dictionary.get(word) == null)? -1 : this.dictionary.get(word);
+    }
+    
+    public int getSize(){
+        return this.dictionary.size();
+    }
+    
     public void saveDictionary2File() throws IOException{
         File file = new File(Dictionary.fileDictionary);
         if (!file.exists()){
@@ -34,7 +40,7 @@ public class Dictionary {
         }
         FileWriter fw = new FileWriter(file);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(this.autoValue + "\n");
+        bw.write((int)this.autoValue + "\n");
         for (String word: this.dictionary.keySet()){
             bw.write(word + " " + this.dictionary.get(word) + "\n");
         }
@@ -47,10 +53,10 @@ public class Dictionary {
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         String line;
-        this.autoValue = Double.parseDouble(br.readLine());
+        this.autoValue = Integer.parseInt(br.readLine());
         while((line = br.readLine()) != null){
             String[] str = line.split("[ ]+");
-            this.dictionary.put(str[0], Double.parseDouble(str[1]));
+            this.dictionary.put(str[0], Integer.parseInt(str[1]));
         }
         br.close();
         fr.close();
@@ -58,12 +64,13 @@ public class Dictionary {
     }
     
     public static void main(String[] args) throws IOException {
-        // TODO Auto-generated method stub
+        String word = "null";
         Dictionary dictionary = new Dictionary();
         dictionary.getDictionaryFromFile();
-        dictionary.addDictionay("Hello1");
-        dictionary.saveDictionary2File();
-        System.out.println(dictionary.autoValue);
+        System.out.println((int)dictionary.autoValue);
+        dictionary.addDictionay(word);
+        System.out.println((int)dictionary.autoValue);
+        System.out.println(dictionary.getValue(word));
         
 
     }

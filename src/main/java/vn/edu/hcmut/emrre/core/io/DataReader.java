@@ -132,13 +132,13 @@ public class DataReader {
                 Concept concept1 = findConcept(concepts, conceptContent1, lineIndex1, begin1, end1, fileName);
                 Concept concept2 = findConcept(concepts, conceptContent2, lineIndex2, begin2, end2, fileName);
                 if (concept1 != null && concept2 != null) {
-                    Relation relation = new Relation(fileName, concept1.getKey(), concept2.getKey(),
+                    Relation relation = new Relation(fileName, concept1, concept2,
                             Relation.Type.valueOf(relationType), relations.size());
                     // System.out.println(relation);
                     relations.add(relation);
                     // add each concept key to the relateLst of other
-                    concept1.addRelateLst(concept2.getKey());
-                    concept2.addRelateLst(concept1.getKey());
+                    concept1.addRelateLst(concept2);
+                    concept2.addRelateLst(concept1);
                 }
             }
 

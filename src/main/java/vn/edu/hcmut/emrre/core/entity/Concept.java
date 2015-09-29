@@ -12,7 +12,7 @@ public class Concept {
     private int end;
     private int line;
     private int key;
-    private List<Integer> relateLst;
+    private List<Concept> relateLst;
 
     public Concept(String fileName, String content, int line, int begin, int end, Type type, int key) {
         this.fileName = fileName;
@@ -22,15 +22,15 @@ public class Concept {
         this.end = end;
         this.type = type;
         this.key = key;
-        this.relateLst = new ArrayList<Integer>();
+        this.relateLst = new ArrayList<Concept>();
     }
 
-    public List<Integer> getRelateLst() {
+    public List<Concept> getRelateLst() {
         return this.relateLst;
     }
 
-    public void addRelateLst(int key) {
-        relateLst.add(key);
+    public void addRelateLst(Concept concept) {
+        relateLst.add(concept);
     }
 
     public static Concept getConcept(int key, List<Concept> conceptLst) {
