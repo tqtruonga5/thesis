@@ -23,13 +23,13 @@ public class ReadFile {
     
     public List<Relation> getAllRelation(List<Concept> concepts, boolean noneRelation){
         List<Relation> relations = new ArrayList<Relation>();
-        File folder = new File("src/main/resources/" + this.folder + "/rel");
+        File folder = new File("src/main/resources/" + this.folder);
         File[] files = folder.listFiles();
         DataReader readFile = new DataReader();
         
         for (int i = 0; i < files.length; i++){
             if (files[i].isFile()){
-                relations.addAll(readFile.readRelations(concepts, this.folder + "/rel/" + files[i].getName()));
+                relations.addAll(readFile.readRelations(concepts, this.folder + "/" + files[i].getName()));
             }
         }
         if (noneRelation){
@@ -37,7 +37,7 @@ public class ReadFile {
                 for (int j = i + 1; j < concepts.size(); j++) {
                     if (Relation.canRelate(concepts.get(i), concepts.get(j))){
                         if (!Relation.hasRelation(concepts.get(i), concepts.get(j))) {
-                            relations.add(new Relation(concepts.get(i).getFileName(), concepts.get(i).getKey(), concepts.get(j).getKey(),
+                            relations.add(new Relation(concepts.get(i).getFileName(), concepts.get(i), concepts.get(j),
                                     Relation.Type.NONE, relations.size()));
                         }
                     }
@@ -45,8 +45,8 @@ public class ReadFile {
         }
         for (int i = 0; i < relations.size() - 1; i++)
         {
-                Concept first = concepts.get(relations.get(i).getPreConcept());
-                Concept second = concepts.get(relations.get(i).getPosConcept());
+                Concept first = relations.get(i).getPreConcept();
+                Concept second = relations.get(i).getPosConcept();
                 if (!Relation.canRelate(first, second)){
                     relations.remove(i);
                 }
@@ -56,12 +56,12 @@ public class ReadFile {
     
     public List<Concept> getAllConcept(int startIndex){
         List<Concept> concepts = new ArrayList<Concept>();
-        File folder = new File("src/main/resources/" + this.folder + "/concept");
+        File folder = new File("src/main/resources/" + this.folder);
         File[] files = folder.listFiles();
         DataReader readFile = new DataReader();
         for (int i = 0; i < files.length; i++){
             if (files[i].isFile()){
-                concepts.addAll(readFile.readConcepts(this.folder + "/concept/" + files[i].getName(), startIndex + concepts.size()));
+                concepts.addAll(readFile.readConcepts(this.folder + "/" + files[i].getName(), startIndex + concepts.size()));
             }
         }
         return concepts;
@@ -69,13 +69,13 @@ public class ReadFile {
     
     public List<DocLine> getAllDocLine(){
         List<DocLine> doclines = new ArrayList<DocLine>();
-        File folder = new File("src/main/resources/" + this.folder + "/txt");
+        File folder = new File("src/main/resources/" + this.folder);
         File[] files = folder.listFiles();
         DataReader readFile = new DataReader();
         for (int i = 0; i < files.length; i++){
             if (files[i].isFile()){
                 System.out.println(files[i].getPath());
-                doclines.addAll(readFile.readDocument(this.folder + "/txt/" + files[i].getName()));
+                doclines.addAll(readFile.readDocument(this.folder + "/" + files[i].getName()));
             }
         }
         return doclines;

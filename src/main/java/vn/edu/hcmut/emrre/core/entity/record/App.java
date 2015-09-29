@@ -7,10 +7,10 @@ import vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAOImpl;
 public class App {
     public static void main(String[] args) {
         SentenceDAO sentenceDAO = new SentenceDAOImpl();
-        Sentence sentence = sentenceDAO.findByRecordAndLineIndex("record-13", 12);
+        Sentence sentence = sentenceDAO.findByRecordAndLineIndex("record-17", 12);
         System.err.println(sentence);
         
-        System.out.println(sentence.getWords());
+        //System.out.println(sentence.getWords());
 
     }
 }

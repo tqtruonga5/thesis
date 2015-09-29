@@ -1,0 +1,6 @@
+Candidate relations: 19113
+Total relations: 6292
+Actualy, lack file:
+Candidate relations: 18941
+Total relations: 6235
+True: 2608
