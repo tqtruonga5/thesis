@@ -105,8 +105,13 @@ public class EmrTest {
     private boolean similarConcepts(int a1, int b1, int a2, int b2) {
         return (a1 == a2 && b1 == b2) || (a1 == b2 && b1 == a2);
     }
+    
+    private boolean similarRel(Relation correct, Relation relation){
+        return similarConcepts(correct.getPreConcept().getKey(), correct.getPosConcept().getKey(),
+                relation.getPreConcept().getKey(), relation.getPosConcept().getKey());
+    }
 
-    private boolean similarRel(Relation correct, Relation relation) {
+    private boolean correctRel(Relation correct, Relation relation) {
         return similarConcepts(correct.getPreConcept().getKey(), correct.getPosConcept().getKey(),
                 relation.getPreConcept().getKey(), relation.getPosConcept().getKey()) && correct.getType() == relation.getType();
     }
@@ -156,25 +161,33 @@ public class EmrTest {
         getConceptData();
         generateCandidates();
         getCorrectRelationData();
-        int total = 0, tcorrect = 0;
+        int[] arr = new int[]{0, 0, 0, 0, 0, 0, 0, 0};
+        for (Relation rel:correctRelations)
+            if (rel.getType() != Relation.Type.NONE)
+                arr[(int)Relation.valueOfType(rel.getType()) - 1]++;
+        int total = 0, pRelC = 0, pNotN = 0, pNotNC = 0;
         int i = 0;
         if (this.twoRounds){
             SVM svm1 = new SVM(model + "1");
             SVM svm2 = new SVM(model + "2");
             for (Relation relation : candidateRelations) {
+                System.out.println(i++);
                 double[] dataTest = featureExtractor.buildFeatures(relation);
                 dataTest = this.preProcess(dataTest);
                 if (dataTest != null){
                     double label = svm1.svmTestCore(dataTest, true);
-                    if (label != 0)
+                    if (label != 0){
                         label = svm2.svmTestCore(dataTest, true);
-                    System.out.println(i++);
-                    relation.setType(Relation.typeOfDouble((int) label));
-                    for (Relation correct : correctRelations) {
-                        if (similarRel(correct, relation)) {
-                            System.out.println("true " + label);
-                            tcorrect++;
-                            break;
+                        pNotN ++;
+                        relation.setType(Relation.typeOfDouble((int) label));
+                        for (Relation correct : correctRelations) {
+                            if (similarRel(correct, relation))
+                                pNotNC ++;
+                            if (correctRel(correct, relation)) {
+                                System.out.println("true " + label);
+                                pRelC ++;
+                                break;
+                            }
                         }
                     }
                     total++;
@@ -188,19 +201,26 @@ public class EmrTest {
                     if (dataTest != null) {
                         System.out.println(i++);
                         double label = svm.svmTestCore(dataTest, true);
-                        relation.setType(Relation.typeOfDouble((int) label));
-                        for (Relation correct : correctRelations) {
-                            if (similarRel(correct, relation)) {
-                                System.out.println("true " + label);
-                                tcorrect++;
-                                break;
+                        if (label != 0){
+                            pNotN ++;
+                            relation.setType(Relation.typeOfDouble((int) label));
+                            for (Relation correct : correctRelations) {
+                                if (similarRel(correct, relation))
+                                    pNotNC ++;
+                                if (correctRel(correct, relation)) {
+                                    System.out.println("true " + label);
+                                    pRelC ++;
+                                    break;
+                                }
                             }
                         }
                         total++;
                     }
             }
         }
-        System.out.println("Total: " + total + " correct: " + tcorrect + "\n Not include NONE: ");
+        for (int j = 0; j < arr.length; j++)
+            System.out.print(arr[j]+" ");
+        System.out.println("\nTotal: " + total + "--predict correctly: " + pRelC + "\nTotal relatived prediction: " + pNotN + "--predict correctly: " + pNotNC);
         saveTestResult();
         
     }

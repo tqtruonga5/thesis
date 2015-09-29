@@ -34,18 +34,13 @@ public class Dictionary {
     }
     
     public void saveDictionary2File() throws IOException{
-        File file = new File(Dictionary.fileDictionary);
-        if (!file.exists()){
-            file.createNewFile();
-        }
-        FileWriter fw = new FileWriter(file);
-        BufferedWriter bw = new BufferedWriter(fw);
-        bw.write((int)this.autoValue + "\n");
+        WriteFile wf = new WriteFile(Dictionary.fileDictionary);
+        wf.open(false);
+        wf.write((int)this.autoValue + "\n");
         for (String word: this.dictionary.keySet()){
-            bw.write(word + " " + this.dictionary.get(word) + "\n");
+            wf.write(word + " " + this.getValue(word) + "\n");
         }
-        bw.close();
-        fw.close();
+        wf.close();
     }
     
     public void getDictionaryFromFile() throws IOException{

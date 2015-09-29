@@ -14,7 +14,7 @@ import vn.edu.hcmut.emrre.testing.EmrTest;
 import vn.edu.hcmut.emrre.training.EMRTrain2;
 
 public class ContextFeatureExtractor implements FeatureExtractor{
-    private static final int dimension = 5325;
+    private static final int dimension = 21855;
     private double[] vector;
     private Dictionary dictionary;
     private SentenceDAO sentence;
@@ -89,45 +89,74 @@ public class ContextFeatureExtractor implements FeatureExtractor{
 
     }
 
-    private void bagOfWord(String fileName, int lineIndex, int startConcept, int endConcept, int index){
+    private void bagOfWord(Concept preConcept, Concept postConcept, int index){
         int size = this.dictionary.getSize();
-        for (int i = index; i < index + size; i++)
-            this.vector[i] = 0;
         WriteFile wf = new WriteFile("lactInDB");
         try {
             wf.open(true);
         } catch (IOException e1) {
-            // TODO Auto-generated catch block
             e1.printStackTrace();
         }
         try{
-        List<Word> wordLst = this.sentence.findByRecordAndLineIndex(fileName, lineIndex).getWords();
-        int start = (startConcept >= 3) ? startConcept - 3: 0;
-        int end = (endConcept + 4 <= wordLst.size()) ? endConcept + 3 : wordLst.size() - 1;  
-        for(int i = start; i <= end; i++){
-            int key = this.dictionary.getValue(wordLst.get(i).getLemma());
-            if (key != -1 && key < index + size){
-                this.vector[key] = 1;
+            List<Word> wordLst = this.sentence.findByRecordAndLineIndex(preConcept.getFileName(), preConcept.getLine()).getWords();
+            int start = (preConcept.getBegin() >= 3) ? preConcept.getBegin() - 3: 0;
+            int end = (postConcept.getEnd() + 4 <= wordLst.size()) ? postConcept.getEnd() + 3 : wordLst.size() - 1;  
+            for(int i = start; i <= end; i++){
+                int key = this.dictionary.getValue(wordLst.get(i).getLemma());
+                if (key != -1 && key < index + size){
+                    this.vector[key] = 1;
+                }
             }
-        }
+            //Any bigram between two concepts
+            for (int i = preConcept.getEnd() + 1; i < postConcept.getBegin() - 1; i++){
+                int key = this.dictionary.getValue(wordLst.get(i).getLemma() + wordLst.get(i).getLemma());
+                if (key != -1 && key < index + size){
+                    this.vector[key] = 1;
+                }
+            }
+            //three words succeeding concept
+            if (preConcept.getBegin() >= 3){
+                int idx = preConcept.getBegin();
+                int key = this.dictionary.getValue(wordLst.get(idx - 3).getLemma() + wordLst.get(idx - 2).getLemma() + wordLst.get(idx - 1).getLemma());
+                if (key != -1 && key < index + size){
+                    this.vector[key] = 1;
+                }
+            }
+            if (postConcept.getBegin() >= 3){
+                int idx = postConcept.getBegin();
+                int key = this.dictionary.getValue(wordLst.get(idx - 3).getLemma() + wordLst.get(idx - 2).getLemma() + wordLst.get(idx - 1).getLemma());
+                if (key != -1 && key < index + size){
+                    this.vector[key] = 1;
+                }
+            }
         }
         catch (Exception e){
             try {
-                wf.writeln("File name: " + fileName + ", line: " + lineIndex);
+                wf.writeln("File name: " + preConcept.getFileName() + ", line: " + preConcept.getLine());
             } catch (IOException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
             }
         }
         try {
             wf.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         
     }
 
+    private void typeOfConcepts(Concept preConcept, Concept postConcept, int idx){
+        if (preConcept.getType() == Concept.Type.PROBLEM || postConcept.getType() == Concept.Type.PROBLEM){
+            if (preConcept.getType() == Concept.Type.TEST || postConcept.getType() == Concept.Type.TEST)
+                this.vector[idx] = 1;
+            else
+                if (preConcept.getType() == Concept.Type.TREATMENT || postConcept.getType() == Concept.Type.TREATMENT)
+                    this.vector[idx + 1] = 1;
+                else
+                    this.vector[idx + 2] = 1;
+        }
+    }
+    
     public double[] buildFeatures(Relation relation) {
         if (relation.getType() != null){
             this.vector = new double[dimension + 1];
@@ -135,7 +164,9 @@ public class ContextFeatureExtractor implements FeatureExtractor{
         }
         else{
             this.vector = new double[dimension];
+            this.vector[this.vector.length - 1] = 0;
         }
+        for (int i = 0; i < this.vector.length - 1; i++) this.vector[i] = 0;
         Concept preConcept, postConcept;
         preConcept = relation.getPreConcept();
         postConcept = relation.getPosConcept();
@@ -147,11 +178,8 @@ public class ContextFeatureExtractor implements FeatureExtractor{
 //        this.lemma(preConcept, 13);
 //        this.lemma(postConcept, 14);
 //        this.vector[15] = Relation.valueOfType(relation.getType());
-        if (preConcept.getBegin() < postConcept.getBegin())
-            bagOfWord(preConcept.getFileName(), preConcept.getLine(), preConcept.getBegin(), postConcept.getEnd(), 0);
-        else
-            bagOfWord(preConcept.getFileName(), preConcept.getLine(), postConcept.getBegin(), preConcept.getEnd(), 0);
-        
+        bagOfWord(preConcept, postConcept, 0);
+        typeOfConcepts(preConcept, postConcept, 21852);
         return this.vector;
     }
 

@@ -161,5 +161,22 @@ public class EMRTrain2 {
         }
             System.out.println("Train process successfully");
     }
+    
+//    //construct dictionary
+//    vn.edu.hcmut.emrre.core.utils.Dictionary dictionary = new vn.edu.hcmut.emrre.core.utils.Dictionary();
+//    SentenceDAO sentence = new SentenceDAOImpl();
+//    int ir = 0;
+//    for (Relation relation: relations){
+//        try{
+//            System.out.println(ir++);
+//            List<Word> wordLst = sentence.findByRecordAndLineIndex(relation.getFileName(), relation.getPreConcept().getLine()).getWords();
+//            Concept first = relation.getPreConcept(), second = relation.getPosConcept();
+//            for (Word word: wordLst) dictionary.addDictionay(word.getLemma());
+//            if (first.getBegin() >= 3) dictionary.addDictionay(wordLst.get(first.getBegin() - 3).getLemma() + wordLst.get(first.getBegin() - 2).getLemma() + wordLst.get(first.getBegin() - 1).getLemma());
+//            if (second.getBegin() >= 3) dictionary.addDictionay(wordLst.get(second.getBegin() - 3).getLemma() + wordLst.get(second.getBegin() - 2).getLemma() + wordLst.get(second.getBegin() - 1).getLemma());
+//            for (int i = first.getEnd() + 1; i < second.getBegin() - 1; i++) dictionary.addDictionay(wordLst.get(i).getLemma() + wordLst.get(i + 1).getLemma());
+//        }catch (Exception e){}
+//    }
+//    dictionary.saveDictionary2File();
 
 }
