@@ -33,11 +33,12 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class SimilarityFeaturesExtractor implements FeatureExtractor {
     private static final Logger LOG = LoggerFactory.getLogger(SimilarityFeaturesExtractor.class);
-    private static final String TEST = "t.e.s.t";
-    private static final String PROBLEM = "p.r.o.b.l.e.m";
-    private static final String TREATMENT = "t.r.e.a.t.m.e.n.t";
     SentenceDAO sentenceDAO = new SentenceDAOImpl();
     List<Concept> concepts;
+
+    public SimilarityFeaturesExtractor() {
+
+    }
 
     public SimilarityFeaturesExtractor(List<Concept> concepts) {
         this.concepts = concepts;
@@ -157,30 +158,37 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
     public String[] phraseChunkSequence(Relation relation) {
         Sentence curSentence = getSenContainRelation(relation);
         NLPHelper nlpHelper = NLPHelper.getInstance();
-        nlpHelper.setText(curSentence.getContent());
+        List<Word> words = curSentence.getWords();
+
+        Concept pre = relation.getPreConcept();
+        Concept pos = relation.getPosConcept();
+
+        // trimWords(words, pre);
+        // trimWords(words, pos);
+
+        String input = words.stream().filter(w -> (w.getIndex() > pre.getEnd() && w.getIndex() < pos.getBegin()))
+                .map(t -> t.getContent()).collect(Collectors.joining(" "));
+
+        nlpHelper.setText(input);
         Annotation document = nlpHelper.getAnnotatedDoc();
-
-        CoreMap sen = document.get(SentencesAnnotation.class).get(0);
-
-        // traversing the words in the current sentence
-        // a CoreLabel is a CoreMap with additional token-specific methods
-        // for (CoreLabel token : sen.get(TokensAnnotation.class)) {
-        // // this is the text of the token
-        // String word = token.get(TextAnnotation.class);
-        // String pos = token.get(PartOfSpeechAnnotation.class);
-        // // this is the NER label of the token
-        // String ner = token.get(NamedEntityTagAnnotation.class);
-        // }
-
-        // this is the parse tree of the current sentence
-        Tree tree = sen.get(TreeAnnotation.class);
-        System.err.println(tree.getChildrenAsList());
-
-        for (Tree tree2 : tree.getChild(0).getChildrenAsList()) {
-            System.out.println(tree2.label());
+        CoreMap sen = null;
+        for (CoreMap each : document.get(SentencesAnnotation.class)) {
+            if (each.toString().contains(pre.getType().name())) {
+                sen = each;
+                break;
+            }
         }
-        // this is the POS tag of the token
+        System.out.println(sen);
 
+        if (sen != null) {
+            // this is the parse tree of the current sentence
+            Tree tree = sen.get(TreeAnnotation.class);
+            System.out.println(tree.getChildrenAsList());
+
+            for (Tree tree2 : tree.getChild(0).getChildrenAsList()) {
+                System.out.println(tree2.label());
+            }
+        }
         return null;
     }
 
@@ -193,26 +201,33 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
 
     public static void main(String[] args) {
 
-        String inputConceptFile = "i2b2data/train/beth/concept/record-14.con";
-        String inputRelationFile = "i2b2data/train/beth/rel/record-14.rel";
+        String inputConceptFile = "i2b2data/train/beth/concept/record-13.con";
+        String inputRelationFile = "i2b2data/train/beth/rel/record-13.rel";
         DataReader dataReader = new DataReader();
         List<Concept> concepts = dataReader.readConcepts(inputConceptFile, 0);
         List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
 
-        SimilarityFeaturesExtractor sf = new SimilarityFeaturesExtractor(concepts);
-
-        for (Relation relation : relations) {
-            String[] posTags = sf.posSequence(relation);
-            for (String string : posTags) {
-                System.out.print(string + " ");
-            }
-            System.out.println();
-            // posTags = sf.lemmaSequence(relation);
-            // for (String string : posTags) {
-            // System.err.print(string + " ");
-            // }
-            System.out.println("=====\n");
-        }
+        SimilarityData data = new SimilarityData();
+        data.buildData(relations);
+        
+        data.statistic();
+        
+//        for (SimilaritySequence each : SimilarityData.sequences) {
+//            System.out.println("\n  >> " + each.getRelType());
+//            for (String tag : each.getLemmaSequences()) {
+//                System.out.print(tag + " ");
+//            }
+//            System.out.println();
+//            for (String tag : each.getPosTagSequences()) {
+//                System.out.print(tag + " ");
+//            }
+//            System.out.println();
+//            for (String tag : each.getShortestPaths()) {
+//                System.out.print(tag + " ");
+//            }
+//            System.out.println();
+//        }
+        System.out.println();
     }
 
 }
