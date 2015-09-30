@@ -6,9 +6,15 @@ import vn.edu.hcmut.emrre.core.entity.Relation;
 
 public class SingleConceptFeatureExtractor implements FeatureExtractor{
 
-    public List<Double> buildFeatures(Relation relation) {
+    public double[] buildFeatures(Relation relation) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    public int getDimension() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    
 }

@@ -137,8 +137,8 @@ public class DataReader {
                     // System.out.println(relation);
                     relations.add(relation);
                     // add each concept key to the relateLst of other
-                    concept1.addRelateLst(concept2.getKey());
-                    concept2.addRelateLst(concept1.getKey());
+                    concept1.addRelateLst(concept2);
+                    concept2.addRelateLst(concept1);
                 }
             }
 

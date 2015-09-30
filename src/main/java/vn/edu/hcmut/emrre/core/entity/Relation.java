@@ -11,21 +11,29 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class Relation {
     private String fileName;
-    private Type type;
-    private int key;
     private Concept preConcept;
     private Concept posConcept;
+    private Type type;
+    private int key;
 
     public Relation(String fileName, Concept preConcept, Concept posConcept, Type type, int key) {
-        if (preConcept.getBegin() < posConcept.getBegin()) {
+        if (preConcept.getBegin() <  posConcept.getBegin()){
             this.preConcept = preConcept;
             this.posConcept = posConcept;
-        } else {
+        }
+        else{
             this.preConcept = posConcept;
             this.posConcept = preConcept;
         }
         this.type = type;
         this.fileName = fileName;
+        this.key = key;
+    }
+
+    public Relation(Concept preConcept, Concept posConcept, Type type, int key) {
+        this.preConcept = preConcept;
+        this.posConcept = posConcept;
+        this.type = type;
         this.key = key;
     }
 
@@ -39,6 +47,22 @@ public class Relation {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public Concept getPreConcept() {
+        return preConcept;
+    }
+
+    public void setPreConcept(Concept preConcept) {
+        this.preConcept = preConcept;
+    }
+
+    public Concept getPosConcept() {
+        return posConcept;
+    }
+
+    public void setPosConcept(Concept posConcept) {
+        this.posConcept = posConcept;
     }
 
     public Type getType() {
@@ -60,16 +84,16 @@ public class Relation {
     public static boolean hasRelation(Concept first, Concept second) {
         // TODO Auto-generated method stub
         boolean check = false;
-        List<Integer> relateLst1 = first.getRelateLst();
+        List<Concept> relateLst1 = first.getRelateLst();
         for (int i = 0; i < relateLst1.size(); i++) {
-            if (relateLst1.get(i) == second.getKey()) {
+            if (relateLst1.get(i).getKey() == second.getKey()) {
                 check = true;
                 break;
             }
         }
-        List<Integer> relateLst2 = second.getRelateLst();
+        List<Concept> relateLst2 = second.getRelateLst();
         for (int i = 0; i < relateLst2.size(); i++) {
-            if (relateLst2.get(i) == first.getKey()) {
+            if (relateLst2.get(i).getKey() == first.getKey()) {
                 check = true;
                 break;
             }
@@ -79,7 +103,8 @@ public class Relation {
 
     public static boolean canRelate(Concept first, Concept second) {
         return (first.getType() == Concept.Type.PROBLEM || second.getType() == Concept.Type.PROBLEM)
-                & first.getLine() == second.getLine() & first.getFileName() == second.getFileName();
+                & first.getLine() == second.getLine()
+                & first.getFileName() == second.getFileName();
     }
 
     public static boolean inASentences(int begin1, int begin2, String line) {
@@ -101,26 +126,6 @@ public class Relation {
             }
         }
         return check;
-    }
-
-    public Concept getPreConcept() {
-        return preConcept;
-    }
-
-    public void setPreConcept(Concept preConcept) {
-        this.preConcept = preConcept;
-    }
-
-    public Concept getPosConcept() {
-        return posConcept;
-    }
-
-    public void setPosConcept(Concept posConcept) {
-        this.posConcept = posConcept;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
     }
 
     public static double valueOfType(Type type) {
@@ -145,8 +150,8 @@ public class Relation {
             return 0;
         }
     }
-
-    public static Relation.Type typeOfDouble(int value) {
+    
+    public static Relation.Type typeOfDouble(int value){
         switch (value) {
         case 1:
             return Type.TrIP;

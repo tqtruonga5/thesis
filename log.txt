@@ -1,0 +1,28 @@
+Candidate relations: 19113
+Total relations: 6292
+Actualy, lack file:
+Candidate relations: 18941
+Total relations: 6235
+152 1732 112 342 109 2059 338 1448 
+True: 2608 2624
+
+- Bag of word
+1 Round:
+Total: 18941--predict correctly: 2608
+Total relatived prediction: 6424--predict correctly: 3716
+2 Rounds:
+Total: 18941--predict correctly: 2624
+Total relatived prediction: 6864--predict correctly: 3717
+
+- Add bigram, three word
+1 Rounds:
+Total: 18941--predict correctly: 2652
+Total relatived prediction: 6420--predict correctly: 3718
+2 Rounds:
+Total: 18941--predict correctly: 2686
+Total relatived prediction: 6871--predict correctly: 3740
+
+- Add type of concept
+2 Rounds:
+Total: 19113--predict correctly: 3571 -- 57.27%
+Total relatived prediction: 6995--predict correctly: 4169
