@@ -1,8 +1,11 @@
 package vn.edu.hcmut.emrre.core.feature.similarity;
 
+import java.io.Serializable;
+
 import vn.edu.hcmut.emrre.core.entity.Relation;
 
-public class SimilaritySequence {
+@SuppressWarnings("serial")
+public class SimilaritySequence implements Serializable {
     private String[] lemmaSequences;
     private String[] posTagSequences;
     private String[] shortestPaths;

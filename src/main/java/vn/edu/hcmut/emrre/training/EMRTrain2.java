@@ -159,7 +159,7 @@ public class EMRTrain2 {
             SVM svm = new SVM(model);
             svm.svmTrainCore(new File(this.trainDataFile));
         }
-            System.out.println("Train process successfully");
+            System.out.println("Train process successfully , two rounds = " + this.twoRounds);
     }
     
 //    //construct dictionary

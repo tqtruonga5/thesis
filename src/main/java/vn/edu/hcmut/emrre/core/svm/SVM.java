@@ -19,13 +19,13 @@ public class SVM {
     private String fileModel;
     private int dimension;
     private List<double[]> data;
-    
+
     public SVM(String fileModel, int dimension, List<double[]> data) {
         this.fileModel = fileModel;
         this.dimension = dimension;
         this.data = data;
     }
-    
+
     public SVM(String fileModel) {
         this.fileModel = fileModel;
     }
@@ -57,26 +57,23 @@ public class SVM {
     private Feature[] parse2FeatureNode(double[] vector, boolean sparseVector) {
         List<Feature> arrayLst = new ArrayList<Feature>();
         for (int i = 0; i < vector.length; i++) {
-            if (sparseVector){
-                arrayLst.add(new FeatureNode((int)vector[i], 1));
+            if (sparseVector) {
+                arrayLst.add(new FeatureNode((int) vector[i], 1));
+            } else if (vector[i] != -1) {
+                arrayLst.add(new FeatureNode(i, vector[i]));
             }
-            else
-                if (vector[i] != -1) {
-                    arrayLst.add(new FeatureNode(i, vector[i]));
-                }
         }
         Feature[] result = new FeatureNode[arrayLst.size()];
-       for (int i = 0; i < arrayLst.size(); i++) {
-           result[i] = arrayLst.get(i);
+        for (int i = 0; i < arrayLst.size(); i++) {
+            result[i] = arrayLst.get(i);
         }
         return result;
     }
-    
+
     public void svmTrainCore() throws IOException {
         Problem svm = new Problem();
         svm.l = data.size();
         svm.n = dimension;
-        
 
         Feature[][] feature = new FeatureNode[svm.l][];
         double[] label = new double[svm.l];
@@ -97,7 +94,7 @@ public class SVM {
         File fileModel = new File(this.fileModel);
         model.save(fileModel);
     }
-    
+
     public void svmTrainCore(File trainDataFile) throws IOException, InvalidInputDataException {
         Problem svm = Problem.readFromFile(trainDataFile, 0);
         SolverType solver = SolverType.MCSVM_CS; // -s 0
@@ -116,5 +113,22 @@ public class SVM {
         double prediction = Linear.predict(model, instance);
         return prediction;
     }
-    
+
+    public double svmTestCore(double[] dataTest) throws IOException {
+        File fileModel = new File(this.fileModel);
+        Model model = Model.load(fileModel);
+        Feature[] instance = parse2FeatureNode(dataTest);
+        double prediction = Linear.predict(model, instance);
+        return prediction;
+    }
+
+    private Feature[] parse2FeatureNode(double[] vector) {
+        List<Feature> arrayLst = new ArrayList<Feature>();
+        for (int i = 0; i < vector.length; i++) {
+            arrayLst.add(new FeatureNode(i + 1, vector[i]));
+        }
+
+        return arrayLst.stream().toArray(Feature[]::new);
+    }
+
 }
