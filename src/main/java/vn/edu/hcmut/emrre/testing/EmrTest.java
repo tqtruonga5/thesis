@@ -13,6 +13,7 @@ import vn.edu.hcmut.emrre.core.feature.FeatureExtractor;
 import vn.edu.hcmut.emrre.core.feature.FeatureExtractorFactory;
 import vn.edu.hcmut.emrre.core.svm.SVM;
 import vn.edu.hcmut.emrre.core.utils.ReadFile;
+import vn.edu.hcmut.emrre.training.EMRTrain2;
 
 public class EmrTest {
     private static List<Relation> correctRelations;
@@ -176,7 +177,7 @@ public class EmrTest {
                 double[] dataTest = featureExtractor.buildFeatures(relation);
                 // dataTest = this.preProcess(dataTest);
                 if (dataTest != null) {
-                    // double label = svm1.svmTestCore(dataTest, true);
+                    // double label = svm1.svmTestCore(dataTest, false);
                     double label = svm1.svmTestCore(dataTest);
                     if (label != 0) {
                         // label = svm2.svmTestCore(dataTest, true);
@@ -229,5 +230,23 @@ public class EmrTest {
                 + pNotN + "--predict correctly: " + pNotNC);
         saveTestResult();
 
+    }
+
+    public static void main(String[] args) {
+        EMRTrain2 emrTest = new EMRTrain2(0);
+        emrTest.getConceptData();
+        List<Concept> c = emrTest.getConcepts();
+        for (int i = 0; i < c.size() - 1; i++) {
+            for (int j = i + 1; j < c.size(); j++) {
+                Concept c1 = c.get(i);
+                Concept c2 = c.get(j);
+                if (c1.getBegin() == c2.getBegin() && c1.getFileName().equals(c2.getFileName())
+                        && c1.getLine() == c2.getLine()) {
+                    System.out.println("c1:" + c1);
+                    System.out.println("c2:" + c2 +"\n");
+                    
+                }
+            }
+        }
     }
 }

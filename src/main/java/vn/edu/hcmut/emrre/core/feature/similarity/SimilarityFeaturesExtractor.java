@@ -1,5 +1,6 @@
 package vn.edu.hcmut.emrre.core.feature.similarity;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -8,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
 import vn.edu.hcmut.emrre.core.feature.FeatureExtractor;
+import vn.edu.hcmut.emrre.testing.EmrTest;
+import vn.edu.hcmut.emrre.training.EMRTrain2;
 
 public class SimilarityFeaturesExtractor implements FeatureExtractor {
     private static final Logger LOG = LoggerFactory.getLogger(SimilarityFeaturesExtractor.class);
@@ -28,11 +31,14 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
     }
 
     public double[] buildFeatures(Relation relation) {
+        List<Concept> concepts  = Collections.emptyList();
         if (relation.getType() != null) {
             this.vector = new double[dimension + 1];
             this.vector[dimension] = relation.getType().getValue();
+            concepts = EMRTrain2.getConcepts();
         } else {
             this.vector = new double[dimension];
+            concepts = EmrTest.getConcepts();
         }
 
         SimilaritySequence sequence = new SimilaritySequence();

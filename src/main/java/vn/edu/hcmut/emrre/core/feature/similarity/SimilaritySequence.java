@@ -10,7 +10,16 @@ public class SimilaritySequence implements Serializable {
     private String[] posTagSequences;
     private String[] shortestPaths;
     private String[] phraseChunks;
+    private String[] allConceptType;
     private Relation.Type relType;
+
+    public String[] getAllConceptType() {
+        return allConceptType;
+    }
+
+    public void setAllConceptType(String[] allConceptType) {
+        this.allConceptType = allConceptType;
+    }
 
     public String[] getLemmaSequences() {
         return lemmaSequences;

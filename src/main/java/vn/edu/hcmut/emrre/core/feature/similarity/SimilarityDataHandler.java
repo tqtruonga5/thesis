@@ -15,6 +15,7 @@ import java.util.Queue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
 import vn.edu.hcmut.emrre.training.EMRTrain2;
 
@@ -37,10 +38,9 @@ public class SimilarityDataHandler {
 
     public SimilarityDataHandler() {
         SimilarityDataHandler.sourceSequences = loadSequences("trainSequences.data");
-
     }
 
-    public List<SimilaritySequence> generateSequences(List<Relation> relations) {
+    public List<SimilaritySequence> generateSequences(List<Relation> relations,List<Concept> concepts) {
         List<SimilaritySequence> sequences = new ArrayList<SimilaritySequence>();
         for (Relation relation : relations) {
             SimilaritySequence data = new SimilaritySequence();
@@ -48,6 +48,7 @@ public class SimilarityDataHandler {
             data.setLemmaSequences(DataPreprocess.lemmaSequence(relation));
             data.setShortestPaths(DataPreprocess.shortestPath(relation));
             data.setPhraseChunks(DataPreprocess.phraseChunkSequence(relation));
+            data.setAllConceptType(DataPreprocess.conceptTypeSequence(relation, concepts));
             data.setRelType(relation.getType());
             sequences.add(data);
         }
@@ -130,6 +131,29 @@ public class SimilarityDataHandler {
         dataStatistic = new DataStatistic(q);
         return dataStatistic.getPercentage();
     }
+    
+    public double[] statisticConceptTypeDistance(SimilaritySequence curSequence) {
+        DataStatistic dataStatistic = null;
+        Queue<DataObject> q = new PriorityQueue<DataObject>();
+        for (SimilaritySequence sequence : SimilarityDataHandler.sourceSequences) {
+            if (!sequence.equals(curSequence)) {
+                int distance = LevenshteinDistance.computeDistance(sequence.getAllConceptType(),
+                        curSequence.getAllConceptType());
+
+                if (q.size() < MAX_MOST_CONCEPT_TYPE) {
+                    q.add(new DataObject(distance, sequence.getRelType().getValue()));
+                } else {
+                    if (q.peek().getDistance() > distance) {
+                        q.poll();
+                        q.add(new DataObject(distance, sequence.getRelType().getValue()));
+                    }
+                }
+            }
+        }
+        dataStatistic = new DataStatistic(q);
+        return dataStatistic.getPercentage();
+    }
+    
     
     public double[] statisticPhraseChunksDistance(SimilaritySequence curSequence) {
         DataStatistic dataStatistic = null;
@@ -263,30 +287,28 @@ public class SimilarityDataHandler {
 
         // generate and save sequence form training data
         SimilarityDataHandler dataHandler = SimilarityDataHandler.getInstance();
-        List<SimilaritySequence> sequences = dataHandler.generateSequences(EMRTrain2.getRelations());
+        List<SimilaritySequence> sequences = dataHandler.generateSequences(EMRTrain2.getRelations(),EMRTrain2.getConcepts());
         dataHandler.saveSequences(sequences, "trainSequences.data");
 
-        // List<SimilaritySequence> source =
-        // dataHandler.loadSequences("trainSequences.data");
-        // double[] result =
-        // dataHandler.statisticPosDistance(source.get(10050));
-        // System.out.println(source.get(10050).getRelType().getValue());
-        // for (double d : result) {
-        // System.out.print(" " + d);
-        // }
-        // for (int i = 100; i < 200; i++) {
-        // SimilaritySequence s = source.get(i);
-        // System.out.println("=== BEGIN : " + s.getRelType());
-        // for (String string : s.getLemmaSequences()) {
-        // System.out.print(" " + string);
-        // }
-        // System.out.println();
-        //
-        // for (String string : s.getPosTagSequences()){
-        // System.out.print(" " + string);
-        // }
-        // System.out.println("\n====== END =====");
-        // }
+//        List<SimilaritySequence> source = dataHandler.loadSequences("trainSequences.data");
+//        double[] result = dataHandler.statisticPosDistance(source.get(10050));
+//        System.out.println(source.get(10050).getRelType().getValue());
+//        for (double d : result) {
+//            System.out.print(" " + d);
+//        }
+//        for (int i = 100; i < 200; i++) {
+//            SimilaritySequence s = source.get(i);
+//            System.out.println("=== BEGIN : " + s.getRelType());
+//            for (String string : s.getLemmaSequences()) {
+//                System.out.print(" " + string);
+//            }
+//            System.out.println();
+//
+//            for (String string : s.getPosTagSequences()) {
+//                System.out.print(" " + string);
+//            }
+//            System.out.println("\n====== END =====");
+//        }
 
     }
 }

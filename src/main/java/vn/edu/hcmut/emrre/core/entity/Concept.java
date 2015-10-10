@@ -3,7 +3,12 @@ package vn.edu.hcmut.emrre.core.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Concept {
+public class Concept implements Comparable<Concept>{
+
+    @Override
+    public int compareTo(Concept o) {
+        return this.getBegin()-o.getBegin();
+    }
 
     private String fileName;
     private String content;

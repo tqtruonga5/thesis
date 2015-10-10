@@ -63,9 +63,6 @@ public class DataPreprocess {
             for (int i = pos.getBegin(); i < pos.getEnd(); i++) {
                 posConceptString.add(null);
             }
-
-            // result = result.subList(begin, end);
-
         } catch (Exception e) {
             LOG.error(relation.getFileName() + "\t" + relation.toString(), e);
         }
@@ -141,7 +138,7 @@ public class DataPreprocess {
             Annotation document = nlpHelper.getAnnotatedDoc();
             CoreMap sen = null;
             for (CoreMap each : document.get(SentencesAnnotation.class)) {
-//                System.out.println(each.toString());
+                // System.out.println(each.toString());
                 if (each.toString().contains(pre.getType().name()) && each.toString().contains(pos.getType().name())) {
                     sen = each;
                     break;
@@ -166,8 +163,7 @@ public class DataPreprocess {
             List<IndexedWord> preResult = dependencies.getShortestUndirectedPathNodes(w1, w2);
             if (preResult != null) {
                 result = preResult;
-            }
-            else{
+            } else {
                 LOG.error("null shortest path");
             }
         } catch (Exception e) {
@@ -221,8 +217,19 @@ public class DataPreprocess {
         return result.stream().filter(w -> w != null).toArray(String[]::new);
     }
 
-    public static String[] conceptTypeSequence(Relation relation) {
-        return null;
+    public static String[] conceptTypeSequence(Relation relation, List<Concept> concepts) {
+        List<Concept> result = new ArrayList<Concept>();
+        if (relation == null || concepts == null) {
+            return result.stream().toArray(String[]::new);
+        }
+        for (Concept each : concepts) {
+            if (each.getLine() == relation.getPreConcept().getLine()
+                && each.getFileName().equals(relation.getPreConcept().getFileName())) {
+                result.add(each);
+            }
+        }
+        Collections.sort(result);
+        return result.stream().filter(c -> c != null).map(c->c.getType().name()).toArray(String[]::new);
     }
 
     private static Sentence getSenContainRelation(Relation relation) {
@@ -248,8 +255,8 @@ public class DataPreprocess {
         List<Relation> relations = EMRTrain2.getRelations();
         System.out.println(relations.size());
         int count = 1;
-        for (Relation relation : relations) {
-            String[] tmps = DataPreprocess.shortestPath(relation);
+        for (Relation relation : relations.subList(0, 10)) {
+            String[] tmps = DataPreprocess.conceptTypeSequence(relation, concepts);
             for (String string : tmps) {
                 System.out.print(" " + string);
             }
@@ -258,8 +265,7 @@ public class DataPreprocess {
             for (String string : tmps) {
                 System.out.print(" " + string);
             }
-//            System.out.println(" \n >>> >>>>>> >>>>>>>>");
-            System.out.println(count++);
+            System.out.println("\n ----------------------------");
         }
     }
 
