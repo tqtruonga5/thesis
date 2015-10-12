@@ -56,13 +56,17 @@ public class SVM {
 
     private Feature[] parse2FeatureNode(double[] vector, boolean sparseVector) {
         List<Feature> arrayLst = new ArrayList<Feature>();
-        for (int i = 0; i < vector.length; i++) {
+        int bound = vector.length/2;
+        for (int i = 0; i < bound; i++) {
             if (sparseVector){
-                arrayLst.add(new FeatureNode((int)vector[i], 1));
+                if (i < bound)
+                    arrayLst.add(new FeatureNode((int)vector[i], vector[i + bound]));
+                else
+                    arrayLst.add(new FeatureNode((int)vector[i], 1));
             }
             else
                 if (vector[i] != -1) {
-                    arrayLst.add(new FeatureNode(i, vector[i]));
+                    arrayLst.add(new FeatureNode(i + 1, vector[i]));
                 }
         }
         Feature[] result = new FeatureNode[arrayLst.size()];
@@ -100,7 +104,7 @@ public class SVM {
     
     public void svmTrainCore(File trainDataFile) throws IOException, InvalidInputDataException {
         Problem svm = Problem.readFromFile(trainDataFile, 0);
-        SolverType solver = SolverType.MCSVM_CS; // -s 0
+        SolverType solver = SolverType.L2R_LR_DUAL; // -s 0
         double C = 0.5; // cost of constraints violation
         double eps = 0.5; // stopping criteria
         Parameter parameter = new Parameter(solver, C, eps);

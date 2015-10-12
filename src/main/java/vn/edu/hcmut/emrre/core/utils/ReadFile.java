@@ -26,7 +26,7 @@ public class ReadFile {
         File folder = new File("src/main/resources/" + this.folder);
         File[] files = folder.listFiles();
         DataReader readFile = new DataReader();
-        
+        int size = 3102;
         for (int i = 0; i < files.length; i++){
             if (files[i].isFile()){
                 relations.addAll(readFile.readRelations(concepts, this.folder + "/" + files[i].getName()));
@@ -65,6 +65,17 @@ public class ReadFile {
             }
         }
         return concepts;
+    }
+    
+    public void readAllAssertion(List<Concept> concepts){
+        File folder = new File("src/main/resources/" + this.folder);
+        File[] files = folder.listFiles();
+        DataReader readFile = new DataReader();
+        for (int i = 0; i < files.length; i++){
+            if (files[i].isFile()){
+                readFile.readAssertion(concepts, this.folder + "/" + files[i].getName());
+            }
+        }
     }
     
     public List<DocLine> getAllDocLine(){

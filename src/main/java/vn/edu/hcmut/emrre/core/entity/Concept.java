@@ -12,6 +12,7 @@ public class Concept {
     private int end;
     private int line;
     private int key;
+    private String assertion;
     private List<Concept> relateLst;
 
     public Concept(String fileName, String content, int line, int begin, int end, Type type, int key) {
@@ -23,6 +24,14 @@ public class Concept {
         this.type = type;
         this.key = key;
         this.relateLst = new ArrayList<Concept>();
+    }
+
+    public String getAssertion() {
+        return assertion;
+    }
+
+    public void setAssertion(String assertion) {
+        this.assertion = assertion;
     }
 
     public List<Concept> getRelateLst() {
@@ -92,8 +101,8 @@ public class Concept {
     @Override
     public String toString() {
         return String.format(
-                "file name=%s - c=%s -lineIndex =%d - begin=%d - end=%d - type=%s - key=%d - number of relate followed=%d", fileName, content,
-                line, begin, end, type, key, this.relateLst.size());
+                "file name=%s - c=%s -lineIndex =%d - begin=%d - end=%d - type=%s - key=%d - number of relate followed=%d - assertion=%s", fileName, content,
+                line, begin, end, type, key, this.relateLst.size(), assertion);
     }
 
     public static enum Type {

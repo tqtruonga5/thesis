@@ -18,6 +18,10 @@ public class FeatureExtractorFactory {
 
         case FeatureExtractorType.CONCEPT_VICINITY:
             return new ConceptVicinityFeatureExtractor();
+            
+        case FeatureExtractorType.COMBINE:
+            return new Combine();
+            
         default:
             return null;
         }

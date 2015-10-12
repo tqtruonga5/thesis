@@ -5,187 +5,200 @@ import java.util.List;
 
 import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
+import vn.edu.hcmut.emrre.core.entity.sentence.Sentence;
 import vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAO;
 import vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAOImpl;
 import vn.edu.hcmut.emrre.core.entity.word.Word;
 import vn.edu.hcmut.emrre.core.utils.Dictionary;
-import vn.edu.hcmut.emrre.core.utils.WriteFile;
-import vn.edu.hcmut.emrre.testing.EmrTest;
-import vn.edu.hcmut.emrre.training.EMRTrain2;
 
-public class ContextFeatureExtractor implements FeatureExtractor{
-    private static final int dimension = 21855;
+public class ContextFeatureExtractor implements FeatureExtractor {
+    private static final int dimension = 21668;
     private double[] vector;
-    private Dictionary dictionary;
+    private static Dictionary bagDic, bigramDic, threeDic;
+    private static Dictionary[] typeDics;
     private SentenceDAO sentence;
-    
-    public ContextFeatureExtractor() {
-        dictionary = new Dictionary();
-        try{
-            dictionary.getDictionaryFromFile();
-        }catch(IOException e){
+    private static String[] posTag;
+
+    static{
+        if (posTag == null)
+            posTag = new String[]{ "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", "LS", "MD", "NN", "NNS", "NNP",
+                    "NNPS", "PDT", "POS", "PRP", "PRP$", "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "VB", "VBD", "VBG", "VBN",
+                    "VBP", "VBZ", "WDT", "WP", "WP$", "WRB" };
+        if (bagDic == null){
+            bagDic = new Dictionary();
+            try {
+                bagDic.getDictionaryFromFile1("file/dictionary/bag");
+            } catch (IOException e) {
+            }
         }
+        if (bigramDic == null){
+            bigramDic = new Dictionary();
+            try {
+                bigramDic.getDictionaryFromFile1("file/dictionary/bigram");
+            } catch (IOException e) {
+            }
+        }
+        if (threeDic == null){
+            threeDic = new Dictionary();
+            try {
+                threeDic.getDictionaryFromFile1("file/dictionary/three");
+            } catch (IOException e) {
+            }
+        }
+        typeDics = new Dictionary[8];
+        for (int i = 0; i< 8; i++){
+            typeDics[i] = new Dictionary();
+            try {
+                typeDics[i].getDictionaryFromFile("file/dictionary/types/" + Relation.typeOfDouble(i+1));
+            } catch (IOException e) {
+            }
+        }
+    }
+    public ContextFeatureExtractor() {
         sentence = new SentenceDAOImpl();
     }
     
-    public Dictionary getDictionary(){
-        return this.dictionary;
+    private double[] normalize(double[] vector, int begin){
+        double[] offset = {13.32, 1.19, 19.10, 5.99, 20.45, 1, 6.31, 1.44};
+        double t = 0;
+        for (int i = 0; i < 8; i++){
+            vector[begin + i] *= offset[i];
+            t += vector[begin + i];
+        }
+        if (t != 0)
+            for (int i = 0; i < 8; i++)
+                vector[begin + i] /= t;
+        return vector;
+    }
+
+    private void posBetweenRel(Concept preConcept, Concept postConcept, int index) {
+        Sentence aSentence = this.sentence.findByRecordAndLineIndex(preConcept.getFileName(), preConcept.getLine());
+        if (aSentence != null) {
+            List<Word> wordLst = aSentence.getWords();
+            for (int i = preConcept.getEnd() + 1; i < postConcept.getBegin(); i++)
+                for (int j = 0; j < this.posTag.length; j++)
+                    if (this.posTag[j].equals(wordLst.get(i).getPosTag())) {
+                        this.vector[j + index] = 1;
+                        break;
+                    }
+        }
     }
     
-    public void setDictionary(Dictionary dictionary){
-        this.dictionary = dictionary;
-    }
-    // the number of words between two concepts
-    private void distance(Concept preConcept, Concept posConcept, int index) {
-        this.vector[index] = (posConcept.getBegin() > preConcept.getEnd()) ? posConcept.getBegin() - preConcept.getEnd() - 1
-                : preConcept.getBegin() - posConcept.getEnd() - 1;
-    }
-
-    private void preThreeWords(Concept concept, int index) {
-        String fileName = concept.getFileName();
-        int lineIndex = concept.getLine();
-        int conceptPosition = concept.getBegin();
-        List<Word> wordLst = sentence.findByRecordAndLineIndex(fileName, lineIndex).getWords();
-        for (int i = 3; i >= 1; i--) {
-            if (conceptPosition - i >= 0) {
-                String word = wordLst.get(conceptPosition - i).getLemma();
-                dictionary.addDictionay(word);
-                this.vector[index++] = dictionary.getValue(word);
-            } else {
-                this.vector[index++] = -1;
-            }
-        }
-    }
-
-    public void posThreeWords(Concept concept, int index) {
-        String fileName = concept.getFileName();
-        int lineIndex = concept.getLine();
-        int conceptPosition = concept.getBegin();
-        List<Word> wordLst = this.sentence.findByRecordAndLineIndex(fileName, lineIndex).getWords();
-        for (int i = 1; i <= 3; i++) {
-            if (conceptPosition + i < wordLst.size()) {
-                String word = wordLst.get(conceptPosition + i).getLemma();
-                dictionary.addDictionay(word);
-                this.vector[index++] = dictionary.getValue(word);
-            } else {
-                this.vector[index++] = -1;
-            }
-        }
-    }
-
-    public void lemma(Concept concept, int index) {
-        String fileName = concept.getFileName();
-        int lineIndex = concept.getLine();
-        int conceptBegin = concept.getBegin();
-        int conceptEnd = concept.getEnd();
-        List<Word> wordLst = this.sentence.findByRecordAndLineIndex(fileName, lineIndex).getWords();
-        String word = "";
-        for (int i = conceptBegin; i <= conceptEnd; i++){
-            if (i < wordLst.size())
-                word += wordLst.get(i).getLemma();
-        }
-        dictionary.addDictionay(word);
-        this.vector[index] = dictionary.getValue(word);
-
-    }
-
-    private void bagOfWord(Concept preConcept, Concept postConcept, int index){
-        int size = this.dictionary.getSize();
-        WriteFile wf = new WriteFile("lactInDB");
-        try {
-            wf.open(true);
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-        try{
-            List<Word> wordLst = this.sentence.findByRecordAndLineIndex(preConcept.getFileName(), preConcept.getLine()).getWords();
-            int start = (preConcept.getBegin() >= 3) ? preConcept.getBegin() - 3: 0;
-            int end = (postConcept.getEnd() + 4 <= wordLst.size()) ? postConcept.getEnd() + 3 : wordLst.size() - 1;  
-            for(int i = start; i <= end; i++){
-                int key = this.dictionary.getValue(wordLst.get(i).getLemma());
-                if (key != -1 && key < index + size){
-                    this.vector[key] = 1;
-                }
-            }
-            //Any bigram between two concepts
+    private void bigram(Concept preConcept, Concept postConcept, int idx){
+        Sentence aSentence = this.sentence.findByRecordAndLineIndex(preConcept.getFileName(), preConcept.getLine());
+        if (aSentence != null){
+            List<Word> wordLst = aSentence.getWords();
             for (int i = preConcept.getEnd() + 1; i < postConcept.getBegin() - 1; i++){
-                int key = this.dictionary.getValue(wordLst.get(i).getLemma() + wordLst.get(i).getLemma());
-                if (key != -1 && key < index + size){
-                    this.vector[key] = 1;
-                }
-            }
-            //three words succeeding concept
-            if (preConcept.getBegin() >= 3){
-                int idx = preConcept.getBegin();
-                int key = this.dictionary.getValue(wordLst.get(idx - 3).getLemma() + wordLst.get(idx - 2).getLemma() + wordLst.get(idx - 1).getLemma());
-                if (key != -1 && key < index + size){
-                    this.vector[key] = 1;
-                }
-            }
-            if (postConcept.getBegin() >= 3){
-                int idx = postConcept.getBegin();
-                int key = this.dictionary.getValue(wordLst.get(idx - 3).getLemma() + wordLst.get(idx - 2).getLemma() + wordLst.get(idx - 1).getLemma());
-                if (key != -1 && key < index + size){
-                    this.vector[key] = 1;
+                int key = bigramDic.getValue(wordLst.get(i).getLemma() + wordLst.get(i+1).getLemma());
+                if (key != -1) {
+                    this.vector[key + idx] = 1;
                 }
             }
         }
-        catch (Exception e){
-            try {
-                wf.writeln("File name: " + preConcept.getFileName() + ", line: " + preConcept.getLine());
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
+    }
+    
+    private void threeWord(Concept preConcept, Concept postConcept, int idx) {
+        Sentence aSentence = this.sentence.findByRecordAndLineIndex(preConcept.getFileName(), preConcept.getLine());
+        if (aSentence != null){
+            List<Word> wordLst = aSentence.getWords();
+                if (preConcept.getBegin() >= 3) {
+                    int idx1 = preConcept.getBegin();
+                    int key = threeDic.getValue(wordLst.get(idx1 - 3).getLemma() + wordLst.get(idx1 - 2).getLemma()
+                            + wordLst.get(idx1 - 1).getLemma());
+                    if (key != -1) {
+                        this.vector[key + idx] = 1;
+                    }
+                }
+                if (postConcept.getBegin() >= 3) {
+                    int idx1 = postConcept.getBegin();
+                    int key = threeDic.getValue(wordLst.get(idx1 - 3).getLemma() + wordLst.get(idx1 - 2).getLemma()
+                            + wordLst.get(idx1 - 1).getLemma());
+                    if (key != -1) {
+                        this.vector[key + idx] = 1;
+                    }
+                }
         }
-        try {
-            wf.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        
     }
 
-    private void typeOfConcepts(Concept preConcept, Concept postConcept, int idx){
-        if (preConcept.getType() == Concept.Type.PROBLEM || postConcept.getType() == Concept.Type.PROBLEM){
+    private void bagOfWord(Concept preConcept, Concept postConcept, int idx){
+        Sentence aSentence = this.sentence.findByRecordAndLineIndex(preConcept.getFileName(), preConcept.getLine());
+        if (aSentence != null){
+            List<Word> wordLst = aSentence.getWords();
+            for (int i = preConcept.getBegin() - 3; i <= postConcept.getEnd() + 3; i++)
+                if (i >= 0 && i < wordLst.size())
+                    for (int j = 0; j < 8; j++){
+                        int key = typeDics[j].getValue(wordLst.get(i).getLemma());
+                        if (key > 0){
+                            this.vector[j + idx] += 1;
+                        }
+                    }
+            //this.vector = normalize(this.vector, idx);
+        }
+    }
+    
+    private void bagOfWord1(Concept preConcept, Concept postConcept, int idx){
+        Sentence aSentence = this.sentence.findByRecordAndLineIndex(preConcept.getFileName(), preConcept.getLine());
+        if (aSentence != null){
+            List<Word> wordLst = aSentence.getWords();
+            for (int i = preConcept.getBegin() - 3; i <= postConcept.getEnd() + 3; i++)
+                if (i >= 0 && i < wordLst.size())
+                    for (int j = 0; j < 8; j++){
+                        int key = bagDic.getValue(wordLst.get(i).getLemma());
+                        if (key != -1){
+                            this.vector[idx + key] = 1;
+                        }
+                    }
+        }
+    }
+
+    private void predicate(String recordName, int sentenceIdx, int idx) {
+        Sentence aSentence = this.sentence.findByRecordAndLineIndex(recordName, sentenceIdx);
+        if (aSentence != null) {
+            if (aSentence.getPredicate() != null) {
+                int key = bagDic.getValue(aSentence.getPredicate());
+                if (key != -1 && key + idx < dimension)
+                    this.vector[key + idx] = 1;
+            }
+        }
+    }
+
+    private void typeOfConcepts(Concept preConcept, Concept postConcept, int idx) {
+        if (preConcept.getType() == Concept.Type.PROBLEM || postConcept.getType() == Concept.Type.PROBLEM) {
             if (preConcept.getType() == Concept.Type.TEST || postConcept.getType() == Concept.Type.TEST)
                 this.vector[idx] = 1;
+            else if (preConcept.getType() == Concept.Type.TREATMENT || postConcept.getType() == Concept.Type.TREATMENT)
+                this.vector[idx + 1] = 1;
             else
-                if (preConcept.getType() == Concept.Type.TREATMENT || postConcept.getType() == Concept.Type.TREATMENT)
-                    this.vector[idx + 1] = 1;
-                else
-                    this.vector[idx + 2] = 1;
+                this.vector[idx + 2] = 1;
         }
     }
     
+    //bagOfWord: 5068, predicate: 8, posBetweenRel: 36, threeWord: 4930, bigram: 11631, typeOfConcepts: 3
     public double[] buildFeatures(Relation relation) {
-        if (relation.getType() != null){
+        if (relation.getType() != null) {
             this.vector = new double[dimension + 1];
             this.vector[dimension] = Relation.valueOfType(relation.getType());
-        }
-        else{
+        } else {
             this.vector = new double[dimension];
             this.vector[this.vector.length - 1] = 0;
         }
-        for (int i = 0; i < this.vector.length - 1; i++) this.vector[i] = 0;
+        for (int i = 0; i < this.vector.length - 1; i++)
+            this.vector[i] = 0;
         Concept preConcept, postConcept;
         preConcept = relation.getPreConcept();
         postConcept = relation.getPosConcept();
-//        this.distance(preConcept, postConcept, 0);
-//        this.preThreeWords(preConcept, 1);
-//        this.preThreeWords(postConcept, 4);
-//        this.posThreeWords(preConcept, 7);
-//        this.posThreeWords(postConcept, 10);
-//        this.lemma(preConcept, 13);
-//        this.lemma(postConcept, 14);
-//        this.vector[15] = Relation.valueOfType(relation.getType());
-        bagOfWord(preConcept, postConcept, 0);
-        typeOfConcepts(preConcept, postConcept, 21852);
+
+        bagOfWord1(preConcept, postConcept, 0);
+        //predicate(preConcept.getFileName(), preConcept.getLine(), 5068);
+        posBetweenRel(preConcept, postConcept, 5068);
+        bigram(preConcept, postConcept, 5104);
+        threeWord(preConcept, postConcept, 16735);
+        typeOfConcepts(preConcept, postConcept, 21665);
         return this.vector;
     }
 
     public int getDimension() {
         return dimension;
     }
-
 
 }

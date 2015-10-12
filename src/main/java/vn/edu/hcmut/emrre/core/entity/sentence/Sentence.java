@@ -20,7 +20,7 @@ public class Sentence {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "index")
+    @Column(name = "position")
     private Long index;
 
 //    @Column(name = "record_id")
@@ -28,6 +28,9 @@ public class Sentence {
 
     @Column(name = "content")
     private String content;
+    
+    @Column(name = "predicate")
+    private String predicate;
 
     private Long includePattern;
     private Long isHandle;
@@ -106,6 +109,15 @@ public class Sentence {
     public void setWords(List<Word> words) {
         this.words = words;
     }
+    
+    public String getPredicate() {
+        return predicate;
+    }
+
+    public void setPredicate(String predicate) {
+        this.predicate = predicate;
+    }
+
 
     @Override
     public String toString() {

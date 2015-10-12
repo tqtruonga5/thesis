@@ -128,7 +128,7 @@ public class Relation {
         return check;
     }
 
-    public static double valueOfType(Type type) {
+    public static int valueOfType(Type type) {
         switch (type) {
         case TrIP:
             return 1;

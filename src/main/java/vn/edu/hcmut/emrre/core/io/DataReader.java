@@ -19,6 +19,7 @@ import vn.edu.hcmut.emrre.core.entity.record.RecordDAOImpl;
 
 public class DataReader {
     private Pattern conceptPattern = Pattern.compile("^c=\"(.*)?\"\\s(\\d+):(\\d+)\\s(\\d+):(\\d+)\\|\\|t=\"(.*)?\"$");
+    private Pattern assertion = Pattern.compile("^c=\"(.*)?\"\\s(\\d+):(\\d+)\\s(\\d+):(\\d+)\\|\\|t=\"(.*)?\"\\|\\|a=\"(.*)?\"$");
     private Pattern relationPattern = Pattern
             .compile("c=\"(.*)?\"\\s(\\d+):(\\d+)\\s(\\d+):(\\d+).*r=\"(.*)?\".*c=\"(.*)?\"\\s(\\d+):(\\d+)\\s(\\d+):(\\d+)$");
 
@@ -150,6 +151,47 @@ public class DataReader {
         return relations;
     }
 
+    public void readAssertion(List<Concept> concepts, String inputFile){
+        Matcher matcher = null;
+        try {
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            InputStreamReader is = new InputStreamReader(classLoader.getResourceAsStream(inputFile));
+            BufferedReader br = new BufferedReader(is);
+
+            String fileName = getFileNameFromPath(inputFile).split("\\.")[0];
+            String lineContent = "";
+
+            while ((lineContent = br.readLine()) != null) {
+                String conceptContent = "";
+                int lineIndex = 0;
+                int begin = 0;
+                int end = 0;
+                String type = "";
+                String assertionStr = "";
+
+                matcher = assertion.matcher(lineContent);
+                if (matcher.find()) {
+                    conceptContent = matcher.group(1).trim();
+                    lineIndex = Integer.parseInt(matcher.group(2).trim());
+                    begin = Integer.parseInt(matcher.group(3).trim());
+                    end = Integer.parseInt(matcher.group(5).trim());
+                    type = matcher.group(6).trim();
+                    assertionStr = matcher.group(7).trim();
+                }
+
+                Concept concept = findConcept(concepts, conceptContent, lineIndex, begin, end, fileName);
+                if (concept != null)
+                    concept.setAssertion(assertionStr);
+                // System.err.println(concept);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
     private String getFileNameFromPath(String filePath) {
         String fileName = "";
         int index = filePath.lastIndexOf("/");
@@ -172,22 +214,24 @@ public class DataReader {
     }
 
     public static void main(String[] args) {
-        String inputDocFile = "i2b2data/beth/txt/record-13.txt";
-        String inputConceptFile = "i2b2data/beth/concept/record-13.con";
-        String inputRelationFile = "i2b2data/beth/rel/record-13.rel";
+        String inputDocFile = "i2b2data/train/beth/txt/record-13.txt";
+        String inputConceptFile = "i2b2data/train/beth/concept/record-13.con";
+        String inputRelationFile = "i2b2data/train/beth/rel/record-13.rel";
+        String inputAssertionFile = "i2b2data/train/beth/ast/record-13.ast";
         DataReader dataReader = new DataReader();
         List<DocLine> docLines = dataReader.readDocument(inputDocFile);
         List<Concept> concepts = dataReader.readConcepts(inputConceptFile, 0);
-        List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
+        dataReader.readAssertion(concepts, inputAssertionFile);
+//        List<Relation> relations = dataReader.readRelations(concepts, inputRelationFile);
 
-        String name = concepts.get(0).getFileName().split("\\.")[0];
-        RecordDAO recordDAO = new RecordDAOImpl();
-        Record record = recordDAO.findByName(name);
+//        String name = concepts.get(0).getFileName().split("\\.")[0];
+//        RecordDAO recordDAO = new RecordDAOImpl();
+//        Record record = recordDAO.findByName(name);
 
         for (Concept each : concepts) {
             System.out.println(each.toString());
             System.out.println(each.getLine());
-            System.err.println(record.getSentences().get(each.getLine() - 1).getWords().get(each.getBegin()));
+//            System.err.println(record.getSentences().get(each.getLine() - 1).getWords().get(each.getBegin()));
         }
 
         // System.err.println(arr[0]);

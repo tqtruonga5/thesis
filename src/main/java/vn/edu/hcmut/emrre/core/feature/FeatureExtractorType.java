@@ -7,4 +7,5 @@ public class FeatureExtractorType {
     public static final int CONCEPT_VICINITY = 4;
     public static final int NESTED_RELATION = 5;
     public static final int SINGLE_CONCEPT = 6;
+    public static final int COMBINE = 7;
 }
