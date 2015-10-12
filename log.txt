@@ -228,3 +228,28 @@ Precision = 64.402077%, Recall = 60.383492%, F1 = 62.328075%
 5 2025 1628
 6 321 88
 7 1409 515
+Total: 19113--predict correctly: 3571 -- 57.27%
+Total relatived prediction: 6995--predict correctly: 4169
+
+
+- train on posSequence + lemmaSequence
+1 round:
+152 1732 112 342 109 2059 338 1448 
+Total: 19113--predict correctly: 3682
+Total relatived prediction: 5897--predict correctly: 4265
+	0.6465
+	0.56
+
+2 round:
+152 1732 112 342 109 2059 338 1448 
+Total: 19113--predict correctly: 4031
+Total relatived prediction: 7196--predict correctly: 4831
+	0.5905
+	0.6243
+
+-train on poSequence + lemma + shortestPath +phraseChunk
+1 round	
+152 1732 112 342 109 2059 338 1448 
+Total: 19113--predict correctly: 3757
+Total relatived prediction: 5788--predict correctly: 4291
+

@@ -2,7 +2,6 @@ package vn.edu.hcmut.emrre.core.entity.record;
 
 import java.util.List;
 import java.util.Properties;
-
 import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -15,6 +14,8 @@ import vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAO;
 import vn.edu.hcmut.emrre.core.entity.sentence.SentenceDAOImpl;
 
 public class App {
+    private static final Logger LOG = LoggerFactory.getLogger(App.class);
+
     public static void main(String[] args) {
         SentenceDAO sentenceDAO = new SentenceDAOImpl();
         List<Sentence> sentences = sentenceDAO.findAll();

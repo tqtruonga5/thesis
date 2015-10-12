@@ -11,7 +11,6 @@ import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.entity.Relation;
 import vn.edu.hcmut.emrre.core.feature.FeatureExtractor;
 import vn.edu.hcmut.emrre.core.feature.FeatureExtractorFactory;
-import vn.edu.hcmut.emrre.core.feature.SingleConceptFeatureExtractor;
 import vn.edu.hcmut.emrre.core.svm.SVM;
 import vn.edu.hcmut.emrre.core.utils.ReadFile;
 
@@ -206,8 +205,6 @@ public class EmrTest {
             SVM svm2 = new SVM(model + "2");
             for (Relation relation : candidateRelations) {
                 double[] dataTest = featureExtractor.buildFeatures(relation);
-           //     double[] dataTest1= singleConcept.buildFeatures(relation);
-           //     dataTest = merge(dataTest, dataTest1);
                 if (this.sparseVector)
                     dataTest = this.preProcess(dataTest);
                 if (dataTest != null) {
@@ -235,8 +232,6 @@ public class EmrTest {
             SVM svm = new SVM(model);
             for (Relation relation : candidateRelations) {
                 double[] dataTest = featureExtractor.buildFeatures(relation);
-           //     double[] dataTest1= singleConcept.buildFeatures(relation);
-           //     dataTest = merge(dataTest, dataTest1);
                 if (this.sparseVector)
                     dataTest = this.preProcess(dataTest);
                 if (dataTest != null) {
@@ -268,6 +263,5 @@ public class EmrTest {
         for (int j = 0; j < arr.length; j++)
             System.out.println(j + " " + arr[j][0] + " " + arr[j][1]);
         saveTestResult();
-
     }
 }
