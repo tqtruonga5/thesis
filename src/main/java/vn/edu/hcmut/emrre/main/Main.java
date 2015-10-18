@@ -10,15 +10,15 @@ import de.bwaldvogel.liblinear.InvalidInputDataException;
 public class Main {
     public static void main(String[] args) throws IOException, InvalidInputDataException {
         String model = "similar-model";
-//        EMRTrain2 emrTrain = new EMRTrain2(FeatureExtractorType.SIMILARITY);
-//        emrTrain.setTrainDataFile("similar-datatrain");
-//        emrTrain.setModel(model);
-//        emrTrain.setTwoRounds(false);
-//        emrTrain.run();
+        EMRTrain2 emrTrain = new EMRTrain2(FeatureExtractorType.SIMILARITY);
+        emrTrain.setTrainDataFile("similar-datatrain");
+        emrTrain.setModel(model);
+        emrTrain.setTwoRounds(true);
+        emrTrain.run();
 
         EmrTest emrTest = new EmrTest(FeatureExtractorType.SIMILARITY);
         emrTest.setModel(model);
-        emrTest.setTwoRounds(false);
+        emrTest.setTwoRounds(true);
         emrTest.run();
     }
 }

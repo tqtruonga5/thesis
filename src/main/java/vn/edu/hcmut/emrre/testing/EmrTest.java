@@ -18,7 +18,7 @@ import vn.edu.hcmut.emrre.training.EMRTrain2;
 public class EmrTest {
     private static List<Relation> correctRelations;
     private static List<Concept> concepts;
-    private static List<Relation> candidateRelations;
+    public static List<Relation> candidateRelations;
     private String model;
     private boolean twoRounds;
     private int type;

@@ -1,6 +1,10 @@
 package vn.edu.hcmut.emrre.core.feature;
 
+import java.util.List;
+
+import vn.edu.hcmut.emrre.core.entity.Concept;
 import vn.edu.hcmut.emrre.core.feature.similarity.SimilarityFeaturesExtractor;
+import vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor;
 
 public class FeatureExtractorFactory {
 
@@ -11,6 +15,27 @@ public class FeatureExtractorFactory {
 
         case FeatureExtractorType.SIMILARITY:
             return new SimilarityFeaturesExtractor();
+
+        case FeatureExtractorType.SINGLE_CONCEPT:
+            return new SingleConceptFeatureExtractor();
+
+        case FeatureExtractorType.WIKIPEDIA:
+            return new WikipediaFeatureExtractor();
+
+        case FeatureExtractorType.CONCEPT_VICINITY:
+            return new ConceptVicinityFeatureExtractor();
+        default:
+            return null;
+        }
+    }
+    
+    public static FeatureExtractor getInstance(int type,List<Concept> concepts) {
+        switch (type) {
+        case FeatureExtractorType.CONTEXT:
+            return new ContextFeatureExtractor();
+
+        case FeatureExtractorType.SIMILARITY:
+            return new SimilarityFeaturesExtractor(concepts);
 
         case FeatureExtractorType.SINGLE_CONCEPT:
             return new SingleConceptFeatureExtractor();

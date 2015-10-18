@@ -19,7 +19,6 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
     List<Concept> concepts;
 
     public SimilarityFeaturesExtractor() {
-
     }
 
     public SimilarityFeaturesExtractor(List<Concept> concepts) {
@@ -27,7 +26,7 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
     }
 
     public int getDimension() {
-        return 0;
+        return this.dimension;
     }
 
     public double[] buildFeatures(Relation relation) {
@@ -46,12 +45,14 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
         sequence.setLemmaSequences(DataPreprocess.lemmaSequence(relation));
         sequence.setPhraseChunks(DataPreprocess.phraseChunkSequence(relation));
         sequence.setShortestPaths(DataPreprocess.shortestPath(relation));
+        sequence.setAllConceptType(DataPreprocess.conceptTypeSequence(relation, concepts));
 
         SimilarityDataHandler dataHandler = SimilarityDataHandler.getInstance();
         double[] posResult = dataHandler.statisticPosDistance(sequence);
         double[] lemmaResult = dataHandler.statisticLemmaDistance(sequence);
         double[] phraseChunkResult = dataHandler.statisticPhraseChunksDistance(sequence);
         double[] shortestPathResult = dataHandler.statisticShortestPathDistance(sequence);
+        double[] conceptTypeResult = dataHandler.statisticConceptTypeDistance(sequence);
 
         for (int i = 0; i < posResult.length; i++) {
             this.vector[i] = posResult[i];
@@ -64,6 +65,9 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
         }
         for (int i = 0; i < shortestPathResult.length; i++) {
             this.vector[i + 27] = shortestPathResult[i];
+        }
+        for (int i = 0; i < conceptTypeResult.length; i++) {
+            this.vector[i + 36] = conceptTypeResult[i];
         }
         
         return this.vector;
@@ -83,15 +87,5 @@ public class SimilarityFeaturesExtractor implements FeatureExtractor {
 
     public void setDemension(int dimension) {
         this.dimension = dimension;
-    }
-
-    public static void main(String[] args) {
-        // EMRTrain2 emr = new EMRTrain2(0);
-        // emr.getConceptData();
-        // emr.getRelationData();
-        // SimilarityFeaturesExtractor extractor = new
-        // SimilarityFeaturesExtractor();
-        // extractor.buildFeatures(EMRTrain2.getRelations().get(4));
-
     }
 }
