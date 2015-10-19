@@ -3,7 +3,7 @@ package vn.edu.hcmut.emrre.core.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Concept {
+public class Concept implements Comparable<Concept>{
 
     private String fileName;
     private String content;
@@ -109,9 +109,8 @@ public class Concept {
         PROBLEM, TREATMENT, TEST
     }
 
-    public static void main(String[] args) {
-        // Concept concept = new Concept("panadol", 1, 5,
-        // Concept.TYPE.TREATMENT);
-        // System.out.println(concept.toString());
+    @Override
+    public int compareTo(Concept concept) {
+        return this.getBegin() - concept.getBegin();
     }
 }

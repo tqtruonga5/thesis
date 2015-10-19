@@ -17,11 +17,10 @@ public class Relation {
     private int key;
 
     public Relation(String fileName, Concept preConcept, Concept posConcept, Type type, int key) {
-        if (preConcept.getBegin() <  posConcept.getBegin()){
+        if (preConcept.getBegin() < posConcept.getBegin()) {
             this.preConcept = preConcept;
             this.posConcept = posConcept;
-        }
-        else{
+        } else {
             this.preConcept = posConcept;
             this.posConcept = preConcept;
         }
@@ -78,7 +77,16 @@ public class Relation {
     }
 
     public static enum Type {
-        TrIP, TrAP, TrNAP, TrCP, TrWP, TeRP, TeCP, PIP, NONE
+        TrIP(1), TrAP(2), TrNAP(3), TrCP(4), TrWP(5), TeRP(6), TeCP(7), PIP(8), NONE(0);
+        int value;
+
+        Type(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
     }
 
     public static boolean hasRelation(Concept first, Concept second) {
@@ -103,8 +111,7 @@ public class Relation {
 
     public static boolean canRelate(Concept first, Concept second) {
         return (first.getType() == Concept.Type.PROBLEM || second.getType() == Concept.Type.PROBLEM)
-                & first.getLine() == second.getLine()
-                & first.getFileName() == second.getFileName();
+                & first.getLine() == second.getLine() & first.getFileName() == second.getFileName();
     }
 
     public static boolean inASentences(int begin1, int begin2, String line) {
@@ -150,8 +157,8 @@ public class Relation {
             return 0;
         }
     }
-    
-    public static Relation.Type typeOfDouble(int value){
+
+    public static Relation.Type typeOfDouble(int value) {
         switch (value) {
         case 1:
             return Type.TrIP;

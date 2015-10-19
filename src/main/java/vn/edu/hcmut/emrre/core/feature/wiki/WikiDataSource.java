@@ -144,26 +144,27 @@ public class WikiDataSource {
         // emrTrain2.getRelationData();
         // List<Relation> relations = EMRTrain2.getRelations();
 
-        EmrTest emrTest = new EmrTest(0);
-        emrTest.getConceptData();
-        emrTest.generateCandidates();
-        List<Relation> relations = EmrTest.candidateRelations;
-        Map<Integer, Concept> map = new TreeMap<Integer, Concept>();
-        for (Relation relation : relations) {
-            Concept concept = relation.getPreConcept();
-            if (map.get(concept.getKey()) == null) {
-                map.put(concept.getKey(), concept);
-            }
-            concept = relation.getPosConcept();
-            if (map.get(concept.getKey()) == null) {
-                map.put(concept.getKey(), concept);
-            }
-        }
-
-        List<Concept> concepts = new ArrayList<Concept>(map.values());
-        System.out.println(concepts.size());
-        WikiDataSource dataSource = new WikiDataSource();
-        dataSource.generateData(concepts.subList(50, concepts.size()), WikiDataSource.EN_WIKI_DATA_TEST_PATH);
+        // EmrTest emrTest = new EmrTest(0);
+        // emrTest.getConceptData();
+        // emrTest.generateCandidates();
+        // List<Relation> relations = EmrTest.candidateRelations;
+        // Map<Integer, Concept> map = new TreeMap<Integer, Concept>();
+        // for (Relation relation : relations) {
+        // Concept concept = relation.getPreConcept();
+        // if (map.get(concept.getKey()) == null) {
+        // map.put(concept.getKey(), concept);
+        // }
+        // concept = relation.getPosConcept();
+        // if (map.get(concept.getKey()) == null) {
+        // map.put(concept.getKey(), concept);
+        // }
+        // }
+        //
+        // List<Concept> concepts = new ArrayList<Concept>(map.values());
+        // System.out.println(concepts.size());
+        // WikiDataSource dataSource = new WikiDataSource();
+        // dataSource.generateData(concepts.subList(50, concepts.size()),
+        // WikiDataSource.EN_WIKI_DATA_TEST_PATH);
         // dataSource.loadDataTest();
         // for (Map.Entry<Integer, WikiDataWrapper> entry :
         // dataSource.getData().entrySet()) {
