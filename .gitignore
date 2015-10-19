@@ -17,3 +17,5 @@ src/main/java/vn/edu/hcmut/emrre/core/entity/record/App.java
 src/main/java/vn/edu/hcmut/emrre/core/feature/similarity/SimilarityFeaturesExtractor.java
 src/main/resources/log4j.properties
 trainSequences.data
+WikiData.en
+WikiDataTest.en

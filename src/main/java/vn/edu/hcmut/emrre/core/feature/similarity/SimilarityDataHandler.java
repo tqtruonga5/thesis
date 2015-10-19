@@ -40,7 +40,7 @@ public class SimilarityDataHandler {
         SimilarityDataHandler.sourceSequences = loadSequences("trainSequences.data");
     }
 
-    public List<SimilaritySequence> generateSequences(List<Relation> relations,List<Concept> concepts) {
+    public List<SimilaritySequence> generateSequences(List<Relation> relations, List<Concept> concepts) {
         List<SimilaritySequence> sequences = new ArrayList<SimilaritySequence>();
         for (Relation relation : relations) {
             SimilaritySequence data = new SimilaritySequence();
@@ -131,7 +131,7 @@ public class SimilarityDataHandler {
         dataStatistic = new DataStatistic(q);
         return dataStatistic.getPercentage();
     }
-    
+
     public double[] statisticConceptTypeDistance(SimilaritySequence curSequence) {
         DataStatistic dataStatistic = null;
         Queue<DataObject> q = new PriorityQueue<DataObject>();
@@ -153,8 +153,7 @@ public class SimilarityDataHandler {
         dataStatistic = new DataStatistic(q);
         return dataStatistic.getPercentage();
     }
-    
-    
+
     public double[] statisticPhraseChunksDistance(SimilaritySequence curSequence) {
         DataStatistic dataStatistic = null;
         Queue<DataObject> q = new PriorityQueue<DataObject>();
@@ -176,7 +175,7 @@ public class SimilarityDataHandler {
         dataStatistic = new DataStatistic(q);
         return dataStatistic.getPercentage();
     }
-    
+
     public double[] statisticShortestPathDistance(SimilaritySequence curSequence) {
         DataStatistic dataStatistic = null;
         Queue<DataObject> q = new PriorityQueue<DataObject>();
@@ -287,10 +286,12 @@ public class SimilarityDataHandler {
 
         // generate and save sequence form training data
         SimilarityDataHandler dataHandler = SimilarityDataHandler.getInstance();
-        List<SimilaritySequence> sequences = dataHandler.generateSequences(EMRTrain2.getRelations(),EMRTrain2.getConcepts());
-        dataHandler.saveSequences(sequences, "trainSequences.data");
+        
+//        List<SimilaritySequence> sequences = dataHandler.generateSequences(EMRTrain2.getRelations(),
+//                EMRTrain2.getConcepts());
+//        dataHandler.saveSequences(sequences, "trainSequences.data");
 
-//        List<SimilaritySequence> source = dataHandler.loadSequences("trainSequences.data");
+        List<SimilaritySequence> source = dataHandler.loadSequences("trainSequences.data");
 //        double[] result = dataHandler.statisticPosDistance(source.get(10050));
 //        System.out.println(source.get(10050).getRelType().getValue());
 //        for (double d : result) {
