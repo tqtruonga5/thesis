@@ -3,3 +3,5 @@
 .settings/
 target/
 logging.log
+WikiData.en
+WikiDataTest.en
