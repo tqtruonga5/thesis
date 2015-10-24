@@ -1,0 +1,1318 @@
+21:28:09.630 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+21:30:57.222 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+21:30:57.252 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.253 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.253 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.253 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.253 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.254 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.254 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.254 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.254 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.254 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.254 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.255 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.255 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.255 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.255 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.256 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.256 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.256 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.256 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.256 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.257 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.257 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.257 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.257 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.258 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.258 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.258 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.258 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.259 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.259 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.259 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.259 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.260 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.260 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.260 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.261 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.261 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.261 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.261 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.262 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.262 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.262 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.262 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.263 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.263 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.263 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.263 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.263 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.263 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.264 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.264 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.264 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.265 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.265 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.265 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.266 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.266 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.266 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.266 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.267 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.267 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.267 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.267 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.268 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.268 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.268 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.271 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.272 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.273 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.273 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.273 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.273 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.274 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.274 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.274 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.274 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.275 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.275 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:30:57.276 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - null
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.795 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+21:41:44.801 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 1 - 0
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.802 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0 - 2
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.802 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 1 - 2
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.802 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 122 - 10
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.802 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 188 - 10
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.803 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 190 - 10
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.803 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 11 - 131
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.803 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 147 - 11
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.803 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 192 - 11
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.803 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 200 - 11
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.803 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 209 - 11
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.804 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 18 - 17
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.804 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 19 - 17
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.804 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 19 - 18
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.804 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 99 - 24
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.805 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 24 - 118
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.805 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 25 - 26
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.805 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 25 - 27
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.805 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 25 - 28
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.805 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 25 - 29
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.805 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 26 - 27
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.806 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 26 - 28
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.806 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 26 - 29
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.806 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 27 - 28
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.806 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 27 - 29
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.806 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 29 - 28
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.806 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 150 - 31
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.807 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 34 - 148
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.807 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 34 - 194
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.807 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 34 - 196
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.807 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 36 - 37
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.808 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 88 - 37
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.808 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 193 - 40
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.808 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 51 - 41
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.808 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 41 - 103
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.809 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 43 - 42
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.809 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 45 - 184
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.809 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 45 - 187
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.809 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 46 - 122
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.810 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 46 - 188
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.810 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 190 - 46
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.810 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 81 - 50
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.810 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 115 - 50
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.811 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 123 - 50
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.811 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 137 - 50
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.811 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 181 - 50
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.811 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 205 - 50
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.812 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 51 - 103
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.812 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 91 - 56
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.812 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 64 - 65
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.813 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 66 - 67
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.813 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 121 - 66
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.813 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 121 - 67
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.814 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 165 - 68
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.814 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 208 - 68
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.814 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 132 - 73
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.815 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 139 - 73
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.816 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 160 - 77
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.817 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 81 - 115
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.817 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 123 - 81
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.818 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 81 - 137
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.818 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 81 - 181
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.819 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 205 - 81
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.819 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 85 - 86
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.820 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 191 - 92
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.820 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 203 - 92
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.820 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 95 - 94
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.820 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 149 - 96
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.821 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 151 - 96
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.821 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 152 - 96
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.821 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 155 - 96
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.821 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 156 - 96
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.821 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 168 - 96
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.821 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 169 - 96
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.821 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 99 - 118
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.822 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 102 - 101
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.822 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 102 - 125
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.822 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 102 - 211
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.823 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 105 - 122
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.823 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 105 - 188
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.824 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 190 - 105
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.824 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 132 - 107
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.824 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 139 - 107
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.824 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 123 - 115
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.825 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 115 - 137
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.825 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 115 - 181
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:41:44.825 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 205 - 115
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:111) ~[classes/:na]
+21:46:54.751 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+21:46:54.759 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.764 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.764 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.765 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.765 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.766 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.767 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.767 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.767 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.767 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.768 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.768 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.768 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.768 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.768 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.769 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.769 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.770 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.770 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.770 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.770 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.771 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.771 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.771 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.771 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.772 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.772 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.772 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.772 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.773 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.773 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.773 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.773 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.774 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.774 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.774 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.775 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.775 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.775 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.775 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.775 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.776 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.777 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.778 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.778 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.779 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.779 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.780 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.780 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.780 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.780 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.781 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.781 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.782 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.782 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.782 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.783 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.783 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.783 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.783 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.784 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.784 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.784 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.785 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.785 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.785 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.786 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.786 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.786 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.786 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.787 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.787 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.787 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.787 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.787 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.787 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.788 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.788 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.788 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.788 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.789 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.789 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.789 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.789 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.790 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.790 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf1(WikipediaFeatureExtractor.java:49) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:39) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+21:46:54.790 [main] ERROR v.e.h.e.c.f.w.WikipediaFeatureExtractor - 0001 - 0001
+java.lang.NullPointerException: null
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.wf2(WikipediaFeatureExtractor.java:57) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.buildFeatures(WikipediaFeatureExtractor.java:40) ~[classes/:na]
+	at vn.edu.hcmut.emrre.core.feature.wiki.WikipediaFeatureExtractor.main(WikipediaFeatureExtractor.java:109) ~[classes/:na]
+22:34:47.934 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+22:39:23.705 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Success! Total: 7967
+22:47:30.735 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+22:48:27.657 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+23:06:32.715 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14899
+23:06:53.292 [main] WARN  info.bliki.api.Connector - parser warnings: [Too many values supplied for parameter 'titles': the limit is 50]
+23:07:52.259 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Export Wiki data to file 'WikiDataTest.en' success!
+23:08:04.886 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Export Wiki data to file 'WikiDataTest.en' success!
+23:08:50.309 [main] INFO  v.e.h.e.core.feature.wiki.WikiQuery - Load Wiki Data Test Success! Total: 14949

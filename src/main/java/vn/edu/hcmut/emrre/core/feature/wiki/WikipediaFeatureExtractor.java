@@ -1,6 +1,5 @@
 package vn.edu.hcmut.emrre.core.feature.wiki;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -8,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import vn.edu.hcmut.emrre.core.entity.Relation;
 import vn.edu.hcmut.emrre.core.feature.FeatureExtractor;
-import vn.edu.hcmut.emrre.training.EMRTrain2;
+import vn.edu.hcmut.emrre.testing.EmrTest;
 
 public class WikipediaFeatureExtractor implements FeatureExtractor {
     private static final Logger LOGGER = LoggerFactory.getLogger(WikipediaFeatureExtractor.class);
@@ -92,18 +91,27 @@ public class WikipediaFeatureExtractor implements FeatureExtractor {
     }
 
     public static void main(String[] args) {
-        EMRTrain2 emrTrain2 = new EMRTrain2(0);
-        emrTrain2.getConceptData();
-        emrTrain2.getRelationData();
+        // EMRTrain2 emrTrain2 = new EMRTrain2(0);
+        // emrTrain2.getConceptData();
+        // emrTrain2.getRelationData();
+        //
+        // List<Relation> relations = emrTrain2.getRelations();
+        EmrTest test = new EmrTest(0);
+        test.getConceptData();
+        test.generateCandidates();
+        List<Relation> relations = test.candidateRelations;
 
-        List<Relation> relations = emrTrain2.getRelations();
         WikipediaFeatureExtractor extractor = new WikipediaFeatureExtractor();
         for (Relation relation : relations.subList(0, 200)) {
-            double[] result = extractor.buildFeatures(relation);
-            for (double d : result) {
-                System.out.print(d + "\t");
+            try {
+                double[] result = extractor.buildFeatures(relation);
+                for (double d : result) {
+                    System.out.print(d + "\t");
+                }
+                System.out.println();
+            } catch (Exception e) {
+                LOGGER.error(relation.getPreConcept().getFileName() + " - " + relation.getPosConcept().getFileName(), e);
             }
-            System.out.println();
         }
 
     }

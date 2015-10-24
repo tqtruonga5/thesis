@@ -110,7 +110,6 @@ public class WikiDataSource {
             this.data = data;
             LOGGER.info("Load Wiki Data Test Success! Total: " + data.size());
         }
-
     }
 
     public void generateData(List<Concept> concepts, String path) {
@@ -148,6 +147,7 @@ public class WikiDataSource {
         emrTest.getConceptData();
         emrTest.generateCandidates();
         List<Relation> relations = EmrTest.candidateRelations;
+
         Map<Integer, Concept> map = new TreeMap<Integer, Concept>();
         for (Relation relation : relations) {
             Concept concept = relation.getPreConcept();
@@ -162,13 +162,20 @@ public class WikiDataSource {
 
         List<Concept> concepts = new ArrayList<Concept>(map.values());
         System.out.println(concepts.size());
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(concepts.get(i).getKey());
+//        }
         WikiDataSource dataSource = new WikiDataSource();
-        dataSource.generateData(concepts.subList(50, concepts.size()), WikiDataSource.EN_WIKI_DATA_TEST_PATH);
-        // dataSource.loadDataTest();
-        // for (Map.Entry<Integer, WikiDataWrapper> entry :
-        // dataSource.getData().entrySet()) {
-        // System.out.println("Id : " + entry.getKey());
-        // System.out.println("Titles:" + entry.getValue().getTitles());
-        // }
+        dataSource.loadDataTest();
+//        dataSource.generateData(concepts.subList(0, 50), WikiDataSource.EN_WIKI_DATA_TEST_PATH);
+        // dataSource.loadDataTrain();
+
+//        int count = 0;
+//        for (Map.Entry<Integer, WikiDataWrapper> entry : dataSource.getData().entrySet()) {
+//            if (count++ > 100)
+//                break;
+//            System.out.println("Id : " + entry.getKey());
+            // System.out.println("Titles:" + entry.getValue().getTitles());
+//        }
     }
 }
