@@ -1,12 +1,16 @@
 package vn.edu.hcmut.emrre.core.entity.record;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
 
 import vn.edu.hcmut.emrre.core.entity.sentence.Sentence;
 
@@ -15,16 +19,18 @@ import vn.edu.hcmut.emrre.core.entity.sentence.Sentence;
 public class Record {
     @Id
     @Column(name = "id")
+    @GeneratedValue
     private Long id;
 
     @Column(name = "text")
+    @Type(type="text")
     private String text;
 
     @Column(name = "name")
     private String name;
 
     @OneToMany(mappedBy = "record")
-    private List<Sentence> sentences;
+    private List<Sentence> sentences = new ArrayList<Sentence>();
 
     public Record() {
     }

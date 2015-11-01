@@ -1,14 +1,18 @@
 package vn.edu.hcmut.emrre.core.entity.sentence;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
 
 import vn.edu.hcmut.emrre.core.entity.record.Record;
 import vn.edu.hcmut.emrre.core.entity.word.Word;
@@ -18,26 +22,22 @@ import vn.edu.hcmut.emrre.core.entity.word.Word;
 public class Sentence {
     @Id
     @Column(name = "id")
+    @GeneratedValue
     private Long id;
 
-    @Column(name = "index")
+    @Column(name = "position")
     private Long index;
 
-//    @Column(name = "record_id")
-    private Long recordId;
-
     @Column(name = "content")
+    @Type(type = "text")
     private String content;
-
-    private Long includePattern;
-    private Long isHandle;
 
     @ManyToOne
     @JoinColumn(name = "record_id", referencedColumnName = "id")
     private Record record;
 
     @OneToMany(mappedBy = "sentence")
-    private List<Word> words;
+    private List<Word> words = new ArrayList<Word>();
 
     public long getId() {
         return id;
@@ -71,32 +71,8 @@ public class Sentence {
         this.content = content;
     }
 
-    public Long getIncludePattern() {
-        return includePattern;
-    }
-
-    public void setIncludePattern(Long includePattern) {
-        this.includePattern = includePattern;
-    }
-
-    public Long getIsHandle() {
-        return isHandle;
-    }
-
-    public void setIsHandle(Long isHandle) {
-        this.isHandle = isHandle;
-    }
-
     public void setIndex(Long index) {
         this.index = index;
-    }
-
-    public Long getRecordId() {
-        return recordId;
-    }
-
-    public void setRecordId(Long recordId) {
-        this.recordId = recordId;
     }
 
     public List<Word> getWords() {

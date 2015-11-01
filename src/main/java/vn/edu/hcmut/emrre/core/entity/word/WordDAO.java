@@ -16,4 +16,6 @@ public interface WordDAO {
     public List<Word> findAll();
     
     public List<Word> findByIdCondition(Long id);
+    
+    public void closeSession();
 }

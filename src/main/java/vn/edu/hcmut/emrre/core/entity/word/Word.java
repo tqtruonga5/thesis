@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -16,6 +17,7 @@ import vn.edu.hcmut.emrre.core.entity.sentence.Sentence;
 public class Word {
     @Id
     @Column(name = "id")
+    @GeneratedValue
     private long id;
 
     @Column(name = "position")
@@ -121,6 +123,14 @@ public class Word {
 
     public void setLemma(String lemma) {
         this.lemma = lemma;
+    }
+
+    public Sentence getSentence() {
+        return sentence;
+    }
+
+    public void setSentence(Sentence sentence) {
+        this.sentence = sentence;
     }
 
     @Override

@@ -7,29 +7,34 @@ import org.hibernate.Session;
 import vn.edu.hcmut.emrre.core.entity.utils.HibernateUtil;
 
 public class WordDAOImpl implements WordDAO {
+    private Session session;
+
+    public WordDAOImpl() {
+        session = HibernateUtil.getSession();
+    }
+
+    public void closeSession() {
+        session.close();
+    }
 
     public void save(Word word) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         session.save(word);
         session.getTransaction().commit();
     }
 
     public void update(Word word) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         session.update(word);
         session.getTransaction().commit();
     }
 
     public Word findById(Long id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
         Word word = (Word) session.get(Word.class, id);
         return word;
     }
 
     public void delete(Word word) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         session.delete(word);
         session.getTransaction().commit();
@@ -37,7 +42,6 @@ public class WordDAOImpl implements WordDAO {
 
     @SuppressWarnings("unchecked")
     public List<Word> findByIdCondition(Long id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
         List<Word> words = (List<Word>) session.createQuery("from Word w where w.id >= :id").setLong("id", id).list();
         return words;
     }

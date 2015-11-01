@@ -10,44 +10,37 @@ public class SentenceDAOImpl implements SentenceDAO {
     private Session session;
     
     public SentenceDAOImpl(){
-        session = HibernateUtil.getSessionFactory().openSession();
-//        session.beginTransaction();
+        session = HibernateUtil.getSession();
     }
     
     public void closeSession(){
-        session.getTransaction().commit();
         session.close();
     }
 
     public void save(Sentence sentence) {
-        //Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         session.save(sentence);
         session.getTransaction().commit();
     }
 
     public void update(Sentence sentence) {
-        //Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         session.update(sentence);
         session.getTransaction().commit();
     }
 
     public Sentence findById(Long id) {
-        //Session session = HibernateUtil.getSessionFactory().openSession();
         Sentence sentence = (Sentence) session.get(Sentence.class, id);
         return sentence;
     }
 
     public Sentence findByRecordAndLineIndex(String recordName, Integer lineIndex) {
-        //Session session = HibernateUtil.getSessionFactory().openSession();
         Query query = session
                 .createQuery("from Sentence s where s.record.name = :recordName and s.index = :lineIndex");
         return (Sentence) query.setString("recordName", recordName).setLong("lineIndex", lineIndex).uniqueResult();
     }
 
     public void delete(Sentence sentence) {
-        //Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         session.delete(sentence);
         session.getTransaction().commit();
@@ -60,7 +53,6 @@ public class SentenceDAOImpl implements SentenceDAO {
 
     @SuppressWarnings("unchecked")
     public List<Sentence> findAll() {
-        //Session session = HibernateUtil.getSessionFactory().openSession();
         List<Sentence> sentences = session.createQuery("from Sentence").list();
         return sentences;
     }
