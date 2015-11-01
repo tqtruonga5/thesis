@@ -5,6 +5,7 @@ public interface ProcessText {
 
     public String[] wordsSegment(String text);
 
-    public String posTagging(String text);
+    public String posTag(String text);
 
+    public String[] posTags(String text);
 }

@@ -15,8 +15,17 @@ import edu.stanford.nlp.util.StringUtils;
 
 public class ProcessENText implements ProcessText {
 
+    @Override
+    public String posTag(String text) {
+        return null;
+    }
+
+    @Override
+    public String[] posTags(String text) {
+        return null;
+    }
+
     public String wordSegment(String text) {
-        // TODO Auto-generated method stub
         return null;
     }
 
@@ -56,11 +65,6 @@ public class ProcessENText implements ProcessText {
         listTokenSens = new String[listSens.size()];
         listTokenSens = listSens.toArray(listTokenSens);
         return listTokenSens;
-    }
-
-    public String posTagging(String text) {
-        // TODO Auto-generated method stub
-        return null;
     }
 
     public static void main(String[] args) {
