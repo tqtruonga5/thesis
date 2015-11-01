@@ -53,7 +53,7 @@ public class WordDAOImpl implements WordDAO {
 
     @SuppressWarnings("unchecked")
     public List<Word> findAll() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSession();
         List<Word> words = session.createQuery("from Word").list();
         return words;
     }
