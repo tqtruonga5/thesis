@@ -1,11 +1,13 @@
 package vn.edu.hcmut.emrre.core.entity.utils;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
 
     private static final SessionFactory sessionFactory = buildSessionFactory();
+    private static final Session session = sessionFactory.openSession();
 
     @SuppressWarnings("deprecation")
     private static SessionFactory buildSessionFactory() {
@@ -17,10 +19,13 @@ public class HibernateUtil {
         }
     }
 
-    public static SessionFactory getSessionFactory() {
+    private static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
 
+    public static Session getSession(){
+        return session;
+    }
     public static void shutdown() {
         getSessionFactory().close();
     }
